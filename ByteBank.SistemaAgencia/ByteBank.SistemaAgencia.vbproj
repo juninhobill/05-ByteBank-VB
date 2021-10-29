@@ -112,9 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -130,19 +130,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download.jpg" />
+    <ProjectReference Include="..\ByteBank.Bibliotecas\ByteBank.Bibliotecas.vbproj">
+      <Project>{08de4aca-7e01-4f15-96fe-3b4928c48548}</Project>
+      <Name>ByteBank.Bibliotecas</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ByteBankImage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ByteBankImage1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ByteBankImage2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

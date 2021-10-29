@@ -26,12 +26,16 @@ Partial Class Frm_Principal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Aula01ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Video01ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JanelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JanelasHorizontaisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JanelasVerticaisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JanelasCascataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Aula01ToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Aula01ToolStripMenuItem, Me.JanelasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(508, 24)
@@ -50,6 +54,31 @@ Partial Class Frm_Principal
         Me.Video01ToolStripMenuItem.Name = "Video01ToolStripMenuItem"
         Me.Video01ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.Video01ToolStripMenuItem.Text = "Video 01"
+        '
+        'JanelasToolStripMenuItem
+        '
+        Me.JanelasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JanelasHorizontaisToolStripMenuItem, Me.JanelasVerticaisToolStripMenuItem, Me.JanelasCascataToolStripMenuItem})
+        Me.JanelasToolStripMenuItem.Name = "JanelasToolStripMenuItem"
+        Me.JanelasToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.JanelasToolStripMenuItem.Text = "Janelas"
+        '
+        'JanelasHorizontaisToolStripMenuItem
+        '
+        Me.JanelasHorizontaisToolStripMenuItem.Name = "JanelasHorizontaisToolStripMenuItem"
+        Me.JanelasHorizontaisToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.JanelasHorizontaisToolStripMenuItem.Text = "Janelas Horizontais"
+        '
+        'JanelasVerticaisToolStripMenuItem
+        '
+        Me.JanelasVerticaisToolStripMenuItem.Name = "JanelasVerticaisToolStripMenuItem"
+        Me.JanelasVerticaisToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.JanelasVerticaisToolStripMenuItem.Text = "Janelas Verticais"
+        '
+        'JanelasCascataToolStripMenuItem
+        '
+        Me.JanelasCascataToolStripMenuItem.Name = "JanelasCascataToolStripMenuItem"
+        Me.JanelasCascataToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.JanelasCascataToolStripMenuItem.Text = "Janelas Cascata"
         '
         'Frm_Principal
         '
@@ -74,4 +103,8 @@ Partial Class Frm_Principal
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents Aula01ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Video01ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents JanelasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents JanelasHorizontaisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents JanelasVerticaisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents JanelasCascataToolStripMenuItem As ToolStripMenuItem
 End Class
