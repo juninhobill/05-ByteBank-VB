@@ -36,4 +36,12 @@
         Me.LayoutMdi(MdiLayout.Cascade)
 
     End Sub
+
+    Private Sub Video02ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Video02ToolStripMenuItem.Click
+
+        Dim f As New Frm_Login
+        f.MdiParent = Me
+        f.Show()
+
+    End Sub
 End Class

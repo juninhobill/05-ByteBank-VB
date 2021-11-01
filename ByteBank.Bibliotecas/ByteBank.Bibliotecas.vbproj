@@ -64,6 +64,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Bibliotecas\AutenticacaoHelper.vb" />
+    <Compile Include="Classes\Bibliotecas\ClasseTeste.vb" />
     <Compile Include="Classes\Bibliotecas\GerenciadorBonificacao.vb" />
     <Compile Include="Classes\Bibliotecas\IAutenticavel.vb" />
     <Compile Include="Classes\Clientes\Cliente.vb" />

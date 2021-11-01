@@ -19,7 +19,7 @@ Namespace Classes.Funcionarios
 
         'Overrides = Substitui
 
-        Public Overrides Function GetBonificacao() As Double
+        Protected Friend Overrides Function GetBonificacao() As Double
 
             Return (salario * 0.1)
 
