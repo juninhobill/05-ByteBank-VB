@@ -1,6 +1,9 @@
 ﻿
 Namespace Classes.Clientes
 
+    ''' <summary>
+    ''' Esta classe representa uma conta corrente aberta pelo cliente do banco Bytebank
+    ''' </summary>
     Public Class ContaCorrente
 
 #Region "PROPRIEDADES"
@@ -64,6 +67,12 @@ Namespace Classes.Clientes
 
 #Region "CONSTRUTORES"
 
+        ''' <summary>
+        ''' Este construtor instancia uma nova classe conta corrente, devemos passar como parametro o numero da agencia e o numero da conta
+        ''' </summary>
+        ''' <param name="CodigoAgencia">Representa o código da agencia expresso em um número inteiro. Este valor deve ser maior que zero. O parâmetro será atribuído a propriedade <see cref="agencia"/>.</param>
+        ''' <param name="NumeroConta">Representa o código da conta corrente expresso em um número inteiro. Este valor deve ser maior que zero. O parâmetro será atribuído a propriedade <see cref="numero"/>.</param>
+
         Public Sub New(CodigoAgencia As Integer, NumeroConta As Integer)
 
             If (CodigoAgencia <= 0) Then
@@ -96,6 +105,14 @@ Namespace Classes.Clientes
 #End Region
 
 #Region "MÉTODOS"
+
+        ''' <summary>
+        ''' Representa a ação de sacar valores do saldo da conta corrente
+        ''' </summary>
+        ''' <exception cref="ArgumentException">Esta exceção irá acontecer quando o <paramref name="ValorSacado"/> for menor que zero.</exception>
+        ''' <exception cref="ValorSacadoMenorSaldoException">Esta exceção irá acontecer se o valor de <see cref="m_saldo"/> for menor que o valor de <paramref name="ValorSacado"/>.</exception>
+        ''' <param name="ValorSacado">Valor a ser sacado da conta e será atualizado na propriedade <see cref="m_saldo"/>. É um integer</param>
+        ''' <param name="ValorLabel">Valor que representa o tipo de mensagem de alerta que deverá ser exibida ao usuário. É um string.</param>
 
         Public Sub Sacar(ValorSacado As Double, ValorLabel As String)
 

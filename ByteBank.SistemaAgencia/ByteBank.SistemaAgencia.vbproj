@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Humanizer, Version=2.11.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.11.10\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -74,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Estagiario.vb" />
+    <Compile Include="Frm_CartaoCredito.Designer.vb">
+      <DependentUpon>Frm_CartaoCredito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CartaoCredito.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Login.Designer.vb">
       <DependentUpon>Frm_Login.vb</DependentUpon>
     </Compile>
@@ -111,6 +120,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_CartaoCredito.resx">
+      <DependentUpon>Frm_CartaoCredito.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +159,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\ByteBankImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -26,18 +26,20 @@ Partial Class Frm_Principal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Aula01ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Video01ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Aula02ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Video02ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JanelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JanelasHorizontaisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JanelasVerticaisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JanelasCascataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Aula02ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Video02ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Aula03ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Video03ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Aula01ToolStripMenuItem, Me.Aula02ToolStripMenuItem, Me.JanelasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Aula01ToolStripMenuItem, Me.Aula02ToolStripMenuItem, Me.Aula03ToolStripMenuItem, Me.JanelasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(508, 24)
@@ -56,6 +58,19 @@ Partial Class Frm_Principal
         Me.Video01ToolStripMenuItem.Name = "Video01ToolStripMenuItem"
         Me.Video01ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.Video01ToolStripMenuItem.Text = "Video 01"
+        '
+        'Aula02ToolStripMenuItem
+        '
+        Me.Aula02ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Video02ToolStripMenuItem})
+        Me.Aula02ToolStripMenuItem.Name = "Aula02ToolStripMenuItem"
+        Me.Aula02ToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
+        Me.Aula02ToolStripMenuItem.Text = "Aula 02"
+        '
+        'Video02ToolStripMenuItem
+        '
+        Me.Video02ToolStripMenuItem.Name = "Video02ToolStripMenuItem"
+        Me.Video02ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Video02ToolStripMenuItem.Text = "Video 02"
         '
         'JanelasToolStripMenuItem
         '
@@ -82,18 +97,18 @@ Partial Class Frm_Principal
         Me.JanelasCascataToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.JanelasCascataToolStripMenuItem.Text = "Janelas Cascata"
         '
-        'Aula02ToolStripMenuItem
+        'Aula03ToolStripMenuItem
         '
-        Me.Aula02ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Video02ToolStripMenuItem})
-        Me.Aula02ToolStripMenuItem.Name = "Aula02ToolStripMenuItem"
-        Me.Aula02ToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
-        Me.Aula02ToolStripMenuItem.Text = "Aula 02"
+        Me.Aula03ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Video03ToolStripMenuItem})
+        Me.Aula03ToolStripMenuItem.Name = "Aula03ToolStripMenuItem"
+        Me.Aula03ToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
+        Me.Aula03ToolStripMenuItem.Text = "Aula 03"
         '
-        'Video02ToolStripMenuItem
+        'Video03ToolStripMenuItem
         '
-        Me.Video02ToolStripMenuItem.Name = "Video02ToolStripMenuItem"
-        Me.Video02ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.Video02ToolStripMenuItem.Text = "Video 02"
+        Me.Video03ToolStripMenuItem.Name = "Video03ToolStripMenuItem"
+        Me.Video03ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Video03ToolStripMenuItem.Text = "Video 03"
         '
         'Frm_Principal
         '
@@ -124,4 +139,6 @@ Partial Class Frm_Principal
     Friend WithEvents JanelasCascataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Aula02ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Video02ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Aula03ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Video03ToolStripMenuItem As ToolStripMenuItem
 End Class
