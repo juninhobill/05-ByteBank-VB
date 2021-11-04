@@ -79,6 +79,7 @@
     <Compile Include="Classes\Funcionarios\Funcionario.vb" />
     <Compile Include="Classes\Funcionarios\FuncionarioAutenticavel.vb" />
     <Compile Include="Classes\Funcionarios\Gerente.vb" />
+    <Compile Include="Classes\Sistema\ExtrairValordeArgumentosUrl.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
