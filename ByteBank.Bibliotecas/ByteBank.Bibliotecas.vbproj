@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08DE4ACA-7E01-4F15-96FE-3B4928C48548}</ProjectGuid>
+    <ProjectGuid>{D3C78BB8-1E56-472B-A6CF-B917B0891B7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>ByteBank.Bibliotecas</RootNamespace>
     <AssemblyName>ByteBank.Bibliotecas</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,7 +79,6 @@
     <Compile Include="Classes\Funcionarios\Funcionario.vb" />
     <Compile Include="Classes\Funcionarios\FuncionarioAutenticavel.vb" />
     <Compile Include="Classes\Funcionarios\Gerente.vb" />
-    <Compile Include="Classes\Sistema\ExtrairValordeArgumentosUrl.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

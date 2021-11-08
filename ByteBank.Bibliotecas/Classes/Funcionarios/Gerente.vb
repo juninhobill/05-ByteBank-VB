@@ -16,6 +16,7 @@
 #End Region
 
 #Region "MÉTODOS"
+
         Protected Friend Overrides Function GetBonificacao() As Double
 
             Return salario * 0.25

@@ -2,33 +2,33 @@
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' General Information about an assembly is controlled through the following
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
+' As informações gerais sobre um assembly são controladas por
+' conjunto de atributos. Altere estes valores de atributo para modificar as informações
+' associada a um assembly.
 
-' Review the values of the assembly attributes
+' Revise os valores dos atributos do assembly
 
 <Assembly: AssemblyTitle("ByteBank.SistemaAgencia")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("ByteBank.SistemaAgencia")>
-<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyCopyright("Copyright ©  2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("ad5043b7-f591-4d9b-a3f5-550802ca1a60")>
+'O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
+<Assembly: Guid("d3ee97af-940f-41cc-ba2c-3170c90c016a")>
 
-' Version information for an assembly consists of the following four values:
+' As informações da versão de um assembly consistem nos quatro valores a seguir:
 '
-'      Major Version
-'      Minor Version
-'      Build Number
-'      Revision
+'      Versão Principal
+'      Versão Secundária 
+'      Número da Versão
+'      Revisão
 '
-' You can specify all the values or you can default the Build and Revision Numbers
-' by using the '*' as shown below:
+' É possível especificar todos os valores ou usar como padrão os Números de Build e da Revisão
+' utilizando o "*" como mostrado abaixo:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
 <Assembly: AssemblyVersion("1.0.0.0")>

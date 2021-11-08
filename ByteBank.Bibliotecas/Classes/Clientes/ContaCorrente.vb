@@ -1,8 +1,9 @@
 ﻿
 Namespace Classes.Clientes
 
+
     ''' <summary>
-    ''' Esta classe representa uma conta corrente aberta pelo cliente do banco Bytebank
+    ''' Esta classe representa uma conta corrente aberta pelo cliente do banco ByteBank
     ''' </summary>
     Public Class ContaCorrente
 
@@ -68,11 +69,10 @@ Namespace Classes.Clientes
 #Region "CONSTRUTORES"
 
         ''' <summary>
-        ''' Este construtor instancia uma nova classe conta corrente, devemos passar como parametro o numero da agencia e o numero da conta
+        ''' Este construtor instancia uma nova classe contacorrente, Devemos passar como parametro o número da agencia e número da conta
         ''' </summary>
-        ''' <param name="CodigoAgencia">Representa o código da agencia expresso em um número inteiro. Este valor deve ser maior que zero. O parâmetro será atribuído a propriedade <see cref="agencia"/>.</param>
-        ''' <param name="NumeroConta">Representa o código da conta corrente expresso em um número inteiro. Este valor deve ser maior que zero. O parâmetro será atribuído a propriedade <see cref="numero"/>.</param>
-
+        ''' <param name="CodigoAgencia">Representa o código da agencia expresso em número inteiro. Este valor deve ser maior que zero. O parametro será atribuido a propriedade <see cref="agencia"/></param>
+        ''' <param name="NumeroConta">Representa o código da conta corrente expresso em número inteiro. Este valor deve ser maior que zero. O parametro será atribuido a propriedade <see cref="numero"/></param>
         Public Sub New(CodigoAgencia As Integer, NumeroConta As Integer)
 
             If (CodigoAgencia <= 0) Then
@@ -94,7 +94,7 @@ Namespace Classes.Clientes
             End If
 
             agencia = CodigoAgencia
-            numero = NumeroConta
+            Me.numero = NumeroConta
             m_TotalDeContasCriadas += 1
 
             m_TaxaOperacao = 30 / m_TotalDeContasCriadas
@@ -107,13 +107,12 @@ Namespace Classes.Clientes
 #Region "MÉTODOS"
 
         ''' <summary>
-        ''' Representa a ação de sacar valores do saldo da conta corrente
+        ''' Representa a ação de sacar valores do saldo da conta corrente. 
         ''' </summary>
-        ''' <exception cref="ArgumentException">Esta exceção irá acontecer quando o <paramref name="ValorSacado"/> for menor que zero.</exception>
-        ''' <exception cref="ValorSacadoMenorSaldoException">Esta exceção irá acontecer se o valor de <see cref="m_saldo"/> for menor que o valor de <paramref name="ValorSacado"/>.</exception>
+        ''' <exception cref="ArgumentException">Esta exceção irá aconetcer quando o <paramref name="ValorSacado"/> for menor que zero.</exception> 
+        ''' <exception cref="ValorSacadoMenorSaldoException">Esta exceção irá acontecer se o vaor de <see cref="m_saldo"/> for menor que o <paramref name="ValorSacado"/>. </exception>
         ''' <param name="ValorSacado">Valor a ser sacado da conta e será atualizado na propriedade <see cref="m_saldo"/>. É um integer</param>
         ''' <param name="ValorLabel">Valor que representa o tipo de mensagem de alerta que deverá ser exibida ao usuário. É um string.</param>
-
         Public Sub Sacar(ValorSacado As Double, ValorLabel As String)
 
             If ValorSacado < 0 Then
@@ -157,13 +156,6 @@ Namespace Classes.Clientes
             ContaDestino.Depositar(ValorTransferencia)
 
         End Sub
-
-        Public Overrides Function ToString() As String
-            'Dim X As String = "Agência: " + agencia.ToString + " e Conta Corrente: " + numero.ToString +
-            '    " e o saldo atual é: " + saldo.ToString
-            Dim X As String = $"Agência: {agencia} e Conta Corrente: {numero} e o saldo atual é: {saldo}"
-            Return X
-        End Function
 
 #End Region
 

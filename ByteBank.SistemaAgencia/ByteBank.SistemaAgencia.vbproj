@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F0DAEF5-7DAC-4418-9CAD-5FAF653A3187}</ProjectGuid>
+    <ProjectGuid>{B557C705-966E-417A-B6D5-521A65349A90}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>ByteBank.SistemaAgencia.My.MyApplication</StartupObject>
     <RootNamespace>ByteBank.SistemaAgencia</RootNamespace>
     <AssemblyName>ByteBank.SistemaAgencia</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -48,8 +48,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Humanizer, Version=2.11.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Humanizer.Core.2.11.10\lib\netstandard2.0\Humanizer.dll</HintPath>
+    <Reference Include="Humanizer, Version=2.5.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.5.1\lib\netstandard2.0\Humanizer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -77,36 +77,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Estagiario.vb" />
-    <Compile Include="Frm_CartaoCredito.Designer.vb">
-      <DependentUpon>Frm_CartaoCredito.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_CartaoCredito.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Login.Designer.vb">
-      <DependentUpon>Frm_Login.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Principal.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Frm_Principal.Designer.vb">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Secundario.Designer.vb">
-      <DependentUpon>Frm_Secundario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Secundario.vb">
+    <Compile Include="Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,23 +100,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Frm_CartaoCredito.resx">
-      <DependentUpon>Frm_CartaoCredito.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Login.resx">
-      <DependentUpon>Frm_Login.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Secundario.resx">
-      <DependentUpon>Frm_Secundario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -150,17 +121,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ByteBank.Bibliotecas\ByteBank.Bibliotecas.vbproj">
-      <Project>{08de4aca-7e01-4f15-96fe-3b4928c48548}</Project>
+      <Project>{d3c78bb8-1e56-472b-a6cf-b917b0891b7a}</Project>
       <Name>ByteBank.Bibliotecas</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Resources\ByteBankImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

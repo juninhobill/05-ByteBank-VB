@@ -1,6 +1,6 @@
 ﻿Imports ByteBank.Bibliotecas.Classes.Funcionarios
 
-Namespace Classes
+Namespace classes
 
     Public Class Estagiario
         Inherits Funcionario
@@ -39,3 +39,6 @@ Namespace Classes
     End Class
 
 End Namespace
+
+
+
