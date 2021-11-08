@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_PaginaWeb.Designer.vb">
+      <DependentUpon>Frm_PaginaWeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PaginaWeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
       <DependentUpon>Frm_Principal3.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Principal3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_URLs.Designer.vb">
+      <DependentUpon>Frm_URLs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_URLs.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -110,6 +122,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_PaginaWeb.resx">
+      <DependentUpon>Frm_PaginaWeb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal3.resx">
       <DependentUpon>Frm_Principal3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_URLs.resx">
+      <DependentUpon>Frm_URLs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

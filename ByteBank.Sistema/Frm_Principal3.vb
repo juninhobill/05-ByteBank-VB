@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports ByteBank.Bibliotecas.Classes.Clientes
 Imports ByteBank.Bibliotecas.Classes.Funcionarios
+Imports ByteBank.Bibliotecas.Classes.Sistema
 
 Public Class Frm_Principal3
     Public Sub New()
@@ -14,6 +15,7 @@ Public Class Frm_Principal3
         Lbl_Principal3.Text = "Formulário Principal 3"
         Btm_Principal3.Text = "Clique Aqui"
         Btm_Principal03a.Text = "Clique Aqui"
+        Btm_Principal03b.Text = "Clique Aqui"
 
     End Sub
 
@@ -76,4 +78,13 @@ Public Class Frm_Principal3
 
     End Sub
 
+    Private Sub Btm_Principal03b_Click(sender As Object, e As EventArgs) Handles Btm_Principal03b.Click
+
+        Dim url As String = "https://www.bytebank.com.br/cambio?moedaOrigem=dolar&moedaDestino=real&valor=1500"
+        Dim X As New ExtrairValordeArgumentosUrl(url)
+        Dim Y As String = X.GetTodosArgumentos
+
+        MsgBox(Y)
+
+    End Sub
 End Class
