@@ -24,6 +24,7 @@ Partial Class Frm_Principal3
     Private Sub InitializeComponent()
         Me.Lbl_Principal3 = New System.Windows.Forms.Label()
         Me.Btm_Principal3 = New System.Windows.Forms.Button()
+        Me.Btm_Principal03a = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal3
@@ -44,11 +45,21 @@ Partial Class Frm_Principal3
         Me.Btm_Principal3.Text = "Button1"
         Me.Btm_Principal3.UseVisualStyleBackColor = True
         '
+        'Btm_Principal03a
+        '
+        Me.Btm_Principal03a.Location = New System.Drawing.Point(16, 86)
+        Me.Btm_Principal03a.Name = "Btm_Principal03a"
+        Me.Btm_Principal03a.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Principal03a.TabIndex = 2
+        Me.Btm_Principal03a.Text = "Button1"
+        Me.Btm_Principal03a.UseVisualStyleBackColor = True
+        '
         'Frm_Principal3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(396, 288)
+        Me.Controls.Add(Me.Btm_Principal03a)
         Me.Controls.Add(Me.Btm_Principal3)
         Me.Controls.Add(Me.Lbl_Principal3)
         Me.Name = "Frm_Principal3"
@@ -61,4 +72,5 @@ Partial Class Frm_Principal3
 
     Friend WithEvents Lbl_Principal3 As Label
     Friend WithEvents Btm_Principal3 As Button
+    Friend WithEvents Btm_Principal03a As Button
 End Class

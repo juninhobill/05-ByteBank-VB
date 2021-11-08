@@ -1,4 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
+Imports ByteBank.Bibliotecas.Classes.Clientes
+Imports ByteBank.Bibliotecas.Classes.Funcionarios
 
 Public Class Frm_Principal3
     Public Sub New()
@@ -11,6 +13,7 @@ Public Class Frm_Principal3
         Me.Text = "Formulário Principal 3"
         Lbl_Principal3.Text = "Formulário Principal 3"
         Btm_Principal3.Text = "Clique Aqui"
+        Btm_Principal03a.Text = "Clique Aqui"
 
     End Sub
 
@@ -32,4 +35,45 @@ Public Class Frm_Principal3
         MsgBox(y.Value)
 
     End Sub
+
+    Private Sub Btm_Principal03a_Click(sender As Object, e As EventArgs) Handles Btm_Principal03a.Click
+
+        'Dim X As String = "aaaaaa"
+        'Dim Y As Integer = 23
+        'Dim Z As Boolean = True
+        'MsgBox(X.ToString)
+        'MsgBox(Y.ToString)
+        'MsgBox(Z.ToString)
+
+        'Dim conta As New ContaCorrente(2222, 23232323)
+        'MsgBox(conta.ToString)
+
+        Dim Cliente_1 As New Cliente()
+        Dim Cliente_2 As New Cliente()
+
+        Cliente_1.nome = "Carlos"
+        Cliente_1.cpf = "123.123.123-23"
+        Cliente_1.profissao = "Analista de Sistemas"
+
+        Cliente_2.nome = "Carlos"
+        Cliente_2.cpf = "123.123.123-23"
+        Cliente_2.profissao = "Analista de Sistemas"
+
+        Dim Ger As New Gerente("123.123.123-23")
+        Dim KK As String = "aaaaaaaaaaaaaaa"
+
+        If (Cliente_1.Equals(Cliente_2)) Then
+            MsgBox("SÃO IGUAIS!!!")
+        Else
+            MsgBox("NÃO SÃO IGUAIS!!!")
+        End If
+
+    End Sub
+
+    Sub Teste(F As Funcionario)
+
+        ' fazer alguma coisa
+
+    End Sub
+
 End Class

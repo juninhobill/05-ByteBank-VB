@@ -18,6 +18,19 @@ Namespace Classes.Clientes
 
 #Region "MÉTODOS"
 
+        Public Overrides Function Equals(obj As Object) As Boolean
+
+            Dim outroCliente As New Cliente()
+            outroCliente = TryCast(obj, Cliente)
+
+            If outroCliente Is Nothing Then
+                Return False
+            Else
+                Return nome = outroCliente.nome And cpf = outroCliente.cpf And profissao = outroCliente.profissao
+            End If
+
+        End Function
+
 #End Region
 
 #Region "FUNÇÕES ESPECIAIS"

@@ -158,6 +158,13 @@ Namespace Classes.Clientes
 
         End Sub
 
+        Public Overrides Function ToString() As String
+            'Dim X As String = "Agência: " + agencia.ToString + " e Conta Corrente: " + numero.ToString +
+            '    " e o saldo atual é: " + saldo.ToString
+            Dim X As String = $"Agência: {agencia} e Conta Corrente: {numero} e o saldo atual é: {saldo}"
+            Return X
+        End Function
+
 #End Region
 
 
