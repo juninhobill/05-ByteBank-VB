@@ -24,6 +24,8 @@ Partial Class Frm_Principal
     Private Sub InitializeComponent()
         Me.Lbl_Principal = New System.Windows.Forms.Label()
         Me.Btm_Principal = New System.Windows.Forms.Button()
+        Me.Btm_Principal2 = New System.Windows.Forms.Button()
+        Me.Btm_Principal3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal
@@ -44,11 +46,31 @@ Partial Class Frm_Principal
         Me.Btm_Principal.Text = "Button1"
         Me.Btm_Principal.UseVisualStyleBackColor = True
         '
+        'Btm_Principal2
+        '
+        Me.Btm_Principal2.Location = New System.Drawing.Point(15, 97)
+        Me.Btm_Principal2.Name = "Btm_Principal2"
+        Me.Btm_Principal2.Size = New System.Drawing.Size(124, 46)
+        Me.Btm_Principal2.TabIndex = 2
+        Me.Btm_Principal2.Text = "Button1"
+        Me.Btm_Principal2.UseVisualStyleBackColor = True
+        '
+        'Btm_Principal3
+        '
+        Me.Btm_Principal3.Location = New System.Drawing.Point(15, 149)
+        Me.Btm_Principal3.Name = "Btm_Principal3"
+        Me.Btm_Principal3.Size = New System.Drawing.Size(124, 46)
+        Me.Btm_Principal3.TabIndex = 3
+        Me.Btm_Principal3.Text = "Button1"
+        Me.Btm_Principal3.UseVisualStyleBackColor = True
+        '
         'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(320, 231)
+        Me.Controls.Add(Me.Btm_Principal3)
+        Me.Controls.Add(Me.Btm_Principal2)
         Me.Controls.Add(Me.Btm_Principal)
         Me.Controls.Add(Me.Lbl_Principal)
         Me.Name = "Frm_Principal"
@@ -61,4 +83,6 @@ Partial Class Frm_Principal
 
     Friend WithEvents Lbl_Principal As Label
     Friend WithEvents Btm_Principal As Button
+    Friend WithEvents Btm_Principal2 As Button
+    Friend WithEvents Btm_Principal3 As Button
 End Class

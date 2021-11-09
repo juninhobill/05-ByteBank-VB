@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Estagiario.vb" />
+    <Compile Include="Classes\ListaDeContasCorrentes.vb" />
     <Compile Include="Frm_Principal.Designer.vb">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </Compile>
