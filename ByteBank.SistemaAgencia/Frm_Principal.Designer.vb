@@ -26,6 +26,8 @@ Partial Class Frm_Principal
         Me.Btm_Principal = New System.Windows.Forms.Button()
         Me.Btm_Principal2 = New System.Windows.Forms.Button()
         Me.Btm_Principal3 = New System.Windows.Forms.Button()
+        Me.Btm_Principal4 = New System.Windows.Forms.Button()
+        Me.Btm_Principal5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal
@@ -64,11 +66,31 @@ Partial Class Frm_Principal
         Me.Btm_Principal3.Text = "Button1"
         Me.Btm_Principal3.UseVisualStyleBackColor = True
         '
+        'Btm_Principal4
+        '
+        Me.Btm_Principal4.Location = New System.Drawing.Point(173, 45)
+        Me.Btm_Principal4.Name = "Btm_Principal4"
+        Me.Btm_Principal4.Size = New System.Drawing.Size(124, 46)
+        Me.Btm_Principal4.TabIndex = 4
+        Me.Btm_Principal4.Text = "Button1"
+        Me.Btm_Principal4.UseVisualStyleBackColor = True
+        '
+        'Btm_Principal5
+        '
+        Me.Btm_Principal5.Location = New System.Drawing.Point(173, 97)
+        Me.Btm_Principal5.Name = "Btm_Principal5"
+        Me.Btm_Principal5.Size = New System.Drawing.Size(124, 46)
+        Me.Btm_Principal5.TabIndex = 5
+        Me.Btm_Principal5.Text = "Button1"
+        Me.Btm_Principal5.UseVisualStyleBackColor = True
+        '
         'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(320, 231)
+        Me.Controls.Add(Me.Btm_Principal5)
+        Me.Controls.Add(Me.Btm_Principal4)
         Me.Controls.Add(Me.Btm_Principal3)
         Me.Controls.Add(Me.Btm_Principal2)
         Me.Controls.Add(Me.Btm_Principal)
@@ -85,4 +107,6 @@ Partial Class Frm_Principal
     Friend WithEvents Btm_Principal As Button
     Friend WithEvents Btm_Principal2 As Button
     Friend WithEvents Btm_Principal3 As Button
+    Friend WithEvents Btm_Principal4 As Button
+    Friend WithEvents Btm_Principal5 As Button
 End Class

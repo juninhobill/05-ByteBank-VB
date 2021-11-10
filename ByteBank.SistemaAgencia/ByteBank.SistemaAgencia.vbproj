@@ -77,17 +77,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Estagiario.vb" />
+    <Compile Include="Classes\Lista.vb" />
     <Compile Include="Classes\ListaDeContasCorrentes.vb" />
+    <Compile Include="Classes\ListaDeObjects.vb" />
     <Compile Include="Frm_Principal.Designer.vb">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Principal2.Designer.vb">
+      <DependentUpon>Frm_Principal2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal2.resx">
+      <DependentUpon>Frm_Principal2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

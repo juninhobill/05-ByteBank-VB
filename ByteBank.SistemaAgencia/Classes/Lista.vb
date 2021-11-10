@@ -1,10 +1,10 @@
-﻿Imports ByteBank.Bibliotecas.Classes.Clientes
+﻿
 
-Public Class ListaDeContasCorrentes
+Public Class Lista(Of T)
 
 #Region "PROPRIEDADES"
 
-    Private Property _items() As ContaCorrente()
+    Private Property _items() As T()
     Private Property _proximaposicao As Integer
 
     Public ReadOnly Property tamanho() As Integer
@@ -19,7 +19,7 @@ Public Class ListaDeContasCorrentes
 
     Default Public ReadOnly Property item(indice As Integer)
         Get
-            Return GetContaCorrente(indice)
+            Return GetItem(indice)
         End Get
 
     End Property
@@ -30,7 +30,7 @@ Public Class ListaDeContasCorrentes
 
     Public Sub New(Optional numeroPosicoesIniciais As Integer = 5)
 
-        _items = New ContaCorrente(numeroPosicoesIniciais - 1) {}
+        _items = New T(numeroPosicoesIniciais - 1) {}
         _proximaposicao = 0
 
     End Sub
@@ -39,10 +39,9 @@ Public Class ListaDeContasCorrentes
 
 #Region "MÉTODOS"
 
-    Public Sub Adicionar(item As ContaCorrente)
+    Public Sub Adicionar(item As T)
 
         VerificarCapacidadeArrayCopy(_proximaposicao + 1)
-        Console.WriteLine("Novo membro adicionado na posição: " + _proximaposicao.ToString)
         _items(_proximaposicao) = item
         _proximaposicao += 1
 
@@ -60,7 +59,7 @@ Public Class ListaDeContasCorrentes
             novoTamanho = tamanhoNecessario
         End If
 
-        Dim NovoArray(novoTamanho) As ContaCorrente
+        Dim NovoArray(novoTamanho) As T
         Array.Copy(_items, NovoArray, _items.Length)
 
         _items = NovoArray
@@ -79,21 +78,20 @@ Public Class ListaDeContasCorrentes
             novoTamanho = tamanhoNecessario
         End If
 
-        Dim NovoArray(novoTamanho) As ContaCorrente
+        Dim NovoArray(novoTamanho) As T
 
         For i As Integer = 0 To _items.Length - 1
-            Console.WriteLine(".")
             NovoArray(i) = _items(i)
         Next
         _items = NovoArray
 
     End Sub
 
-    Public Function posicaoElemento(Conta As ContaCorrente) As Integer
+    Public Function posicaoElemento(item As T) As Integer
 
         For i As Integer = 0 To _proximaposicao - 1
-            Dim contaAtual As ContaCorrente = _items(i)
-            If contaAtual.Equals(Conta) Then
+            Dim itemAtual As T = _items(i)
+            If itemAtual.Equals(item) Then
                 Return i
             End If
         Next
@@ -102,9 +100,9 @@ Public Class ListaDeContasCorrentes
 
     End Function
 
-    Public Sub Remover(conta As ContaCorrente)
+    Public Sub Remover(item As T)
 
-        Dim indice As Integer = posicaoElemento(conta)
+        Dim indice As Integer = posicaoElemento(item)
         If indice = -1 Then
             Return
         End If
@@ -117,21 +115,7 @@ Public Class ListaDeContasCorrentes
 
     End Sub
 
-    Public Function EscreverElementosArray() As String
-
-        Dim elementos As String = String.Empty
-        For i As Integer = 0 To _proximaposicao - 1
-            elementos += _items(i).agencia.ToString + " - " + _items(i).numero.ToString + vbCrLf
-        Next
-        For i As Integer = 0 To _items.Length - 1
-            elementos += "NULL" + vbCrLf
-        Next
-
-        Return elementos
-
-    End Function
-
-    Public Function GetContaCorrente(indice As Integer) As ContaCorrente
+    Public Function GetItem(indice As Integer) As T
 
         If indice < 0 And indice >= _proximaposicao Then
             Throw New ArgumentOutOfRangeException(NameOf(indice))
@@ -141,26 +125,18 @@ Public Class ListaDeContasCorrentes
 
     End Function
 
-    Public Sub AdicionarVarios(contas As ContaCorrente())
+    Public Sub AdicionarVarios(items As T())
 
-        'For i As Integer = 0 To contas.Length - 1
-        '    Adicionar(contas(i))
-        'Next
-
-        For Each conta As ContaCorrente In contas
-            Adicionar(conta)
+        For Each item As T In items
+            Adicionar(item)
         Next
 
     End Sub
 
-    Public Sub AdicionarVariosUmaUm(ParamArray contas As ContaCorrente())
+    Public Sub AdicionarVariosUmaUm(ParamArray items As T())
 
-        'For i As Integer = 0 To contas.Length - 1
-        '    Adicionar(contas(i))
-        'Next
-
-        For Each conta As ContaCorrente In contas
-            Adicionar(conta)
+        For Each item As T In items
+            Adicionar(item)
         Next
 
     End Sub

@@ -101,6 +101,10 @@ Namespace Classes.Clientes
 
         End Sub
 
+        Private Sub New()
+
+        End Sub
+
 
 #End Region
 
@@ -156,6 +160,23 @@ Namespace Classes.Clientes
             ContaDestino.Depositar(ValorTransferencia)
 
         End Sub
+
+        Public Overrides Function Equals(obj As Object) As Boolean
+
+            Dim outraConta As New ContaCorrente()
+            outraConta = TryCast(obj, ContaCorrente)
+
+            If outraConta Is Nothing Then
+                Return False
+            End If
+
+            If outraConta.agencia = agencia And outraConta.numero = numero Then
+                Return True
+            End If
+
+            Return False
+
+        End Function
 
 #End Region
 
