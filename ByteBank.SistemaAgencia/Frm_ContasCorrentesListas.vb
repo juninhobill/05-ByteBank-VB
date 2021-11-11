@@ -24,6 +24,10 @@ Public Class Frm_ContasCorrentesListas
         Lbl_Agencia2.Text = "Conta Corrente 2"
         Lbl_Agencia3.Text = "Conta Corrente 3"
         Lbl_Agencia4.Text = "Conta Corrente 4"
+        Grp_Estatisticas.Text = "Estatísticas"
+        Btm_Primeiro.Text = "Primeiro"
+        Btm_Ultimo.Text = "Último"
+        Btm_Busca.Text = "Busca"
 
     End Sub
 
@@ -99,5 +103,35 @@ Public Class Frm_ContasCorrentesListas
                 Txt_Array.Text = EscreverElementosArrayIndexador()
             End If
         End If
+    End Sub
+
+    Private Sub Btm_Primeiro_Click(sender As Object, e As EventArgs) Handles Btm_Primeiro.Click
+
+        Dim ContaPrimeira As ContaCorrente
+        ContaPrimeira = Lista.First
+
+        Txt_Primeiro.Text = ContaPrimeira.ToString
+
+    End Sub
+
+    Private Sub Btm_Ultimo_Click(sender As Object, e As EventArgs) Handles Btm_Ultimo.Click
+
+        Dim ContaUltima As ContaCorrente
+        ContaUltima = Lista.Last
+
+        Txt_Ultimo.Text = ContaUltima.ToString
+
+    End Sub
+
+    Private Sub Btm_Busca_Click(sender As Object, e As EventArgs) Handles Btm_Busca.Click
+
+        Dim ContaABuscar As New ContaCorrente(Txt_AgenciaBusca.Text, Txt_ContaBusca.Text, Txt_NomeBusca.Text)
+        Dim ResultadoBusca As Boolean = Lista.Contains(ContaABuscar)
+        If ResultadoBusca Then
+            MsgBox("Conta Corrente existe na lista")
+        Else
+            MsgBox("Conta Corrente NÃO existente na lista")
+        End If
+
     End Sub
 End Class

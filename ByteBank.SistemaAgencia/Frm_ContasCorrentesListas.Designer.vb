@@ -47,7 +47,17 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_Nome2 = New System.Windows.Forms.TextBox()
         Me.Txt_Nome3 = New System.Windows.Forms.TextBox()
         Me.Txt_Nome4 = New System.Windows.Forms.TextBox()
+        Me.Grp_Estatisticas = New System.Windows.Forms.GroupBox()
+        Me.Btm_Primeiro = New System.Windows.Forms.Button()
+        Me.Btm_Ultimo = New System.Windows.Forms.Button()
+        Me.Txt_Primeiro = New System.Windows.Forms.TextBox()
+        Me.Txt_Ultimo = New System.Windows.Forms.TextBox()
+        Me.Txt_NomeBusca = New System.Windows.Forms.TextBox()
+        Me.Txt_ContaBusca = New System.Windows.Forms.TextBox()
+        Me.Txt_AgenciaBusca = New System.Windows.Forms.TextBox()
+        Me.Btm_Busca = New System.Windows.Forms.Button()
         Me.Grp_AdicionarVarios.SuspendLayout()
+        Me.Grp_Estatisticas.SuspendLayout()
         Me.SuspendLayout()
         '
         'Grp_AdicionarVarios
@@ -183,7 +193,7 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_Array.Multiline = True
         Me.Txt_Array.Name = "Txt_Array"
         Me.Txt_Array.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Txt_Array.Size = New System.Drawing.Size(284, 363)
+        Me.Txt_Array.Size = New System.Drawing.Size(264, 363)
         Me.Txt_Array.TabIndex = 14
         '
         'Btm_Remover
@@ -262,11 +272,91 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_Nome4.Size = New System.Drawing.Size(130, 20)
         Me.Txt_Nome4.TabIndex = 25
         '
+        'Grp_Estatisticas
+        '
+        Me.Grp_Estatisticas.Controls.Add(Me.Btm_Busca)
+        Me.Grp_Estatisticas.Controls.Add(Me.Txt_NomeBusca)
+        Me.Grp_Estatisticas.Controls.Add(Me.Txt_ContaBusca)
+        Me.Grp_Estatisticas.Controls.Add(Me.Txt_AgenciaBusca)
+        Me.Grp_Estatisticas.Controls.Add(Me.Txt_Ultimo)
+        Me.Grp_Estatisticas.Controls.Add(Me.Txt_Primeiro)
+        Me.Grp_Estatisticas.Controls.Add(Me.Btm_Ultimo)
+        Me.Grp_Estatisticas.Controls.Add(Me.Btm_Primeiro)
+        Me.Grp_Estatisticas.Location = New System.Drawing.Point(740, 30)
+        Me.Grp_Estatisticas.Name = "Grp_Estatisticas"
+        Me.Grp_Estatisticas.Size = New System.Drawing.Size(227, 361)
+        Me.Grp_Estatisticas.TabIndex = 22
+        Me.Grp_Estatisticas.TabStop = False
+        Me.Grp_Estatisticas.Text = "GroupBox1"
+        '
+        'Btm_Primeiro
+        '
+        Me.Btm_Primeiro.Location = New System.Drawing.Point(17, 52)
+        Me.Btm_Primeiro.Name = "Btm_Primeiro"
+        Me.Btm_Primeiro.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Primeiro.TabIndex = 0
+        Me.Btm_Primeiro.Text = "Button1"
+        Me.Btm_Primeiro.UseVisualStyleBackColor = True
+        '
+        'Btm_Ultimo
+        '
+        Me.Btm_Ultimo.Location = New System.Drawing.Point(17, 109)
+        Me.Btm_Ultimo.Name = "Btm_Ultimo"
+        Me.Btm_Ultimo.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Ultimo.TabIndex = 1
+        Me.Btm_Ultimo.Text = "Button1"
+        Me.Btm_Ultimo.UseVisualStyleBackColor = True
+        '
+        'Txt_Primeiro
+        '
+        Me.Txt_Primeiro.Location = New System.Drawing.Point(17, 26)
+        Me.Txt_Primeiro.Name = "Txt_Primeiro"
+        Me.Txt_Primeiro.Size = New System.Drawing.Size(204, 20)
+        Me.Txt_Primeiro.TabIndex = 2
+        '
+        'Txt_Ultimo
+        '
+        Me.Txt_Ultimo.Location = New System.Drawing.Point(17, 81)
+        Me.Txt_Ultimo.Name = "Txt_Ultimo"
+        Me.Txt_Ultimo.Size = New System.Drawing.Size(204, 20)
+        Me.Txt_Ultimo.TabIndex = 3
+        '
+        'Txt_NomeBusca
+        '
+        Me.Txt_NomeBusca.Location = New System.Drawing.Point(17, 201)
+        Me.Txt_NomeBusca.Name = "Txt_NomeBusca"
+        Me.Txt_NomeBusca.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_NomeBusca.TabIndex = 24
+        '
+        'Txt_ContaBusca
+        '
+        Me.Txt_ContaBusca.Location = New System.Drawing.Point(17, 175)
+        Me.Txt_ContaBusca.Name = "Txt_ContaBusca"
+        Me.Txt_ContaBusca.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_ContaBusca.TabIndex = 23
+        '
+        'Txt_AgenciaBusca
+        '
+        Me.Txt_AgenciaBusca.Location = New System.Drawing.Point(17, 149)
+        Me.Txt_AgenciaBusca.Name = "Txt_AgenciaBusca"
+        Me.Txt_AgenciaBusca.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_AgenciaBusca.TabIndex = 22
+        '
+        'Btm_Busca
+        '
+        Me.Btm_Busca.Location = New System.Drawing.Point(17, 227)
+        Me.Btm_Busca.Name = "Btm_Busca"
+        Me.Btm_Busca.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Busca.TabIndex = 25
+        Me.Btm_Busca.Text = "Button1"
+        Me.Btm_Busca.UseVisualStyleBackColor = True
+        '
         'Frm_ContasCorrentesListas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(778, 409)
+        Me.ClientSize = New System.Drawing.Size(979, 409)
+        Me.Controls.Add(Me.Grp_Estatisticas)
         Me.Controls.Add(Me.Txt_Nome)
         Me.Controls.Add(Me.Grp_AdicionarVarios)
         Me.Controls.Add(Me.Txt_Array)
@@ -281,6 +371,8 @@ Partial Class Frm_ContasCorrentesListas
         Me.Text = "Frm_ContasCorrentesArray"
         Me.Grp_AdicionarVarios.ResumeLayout(False)
         Me.Grp_AdicionarVarios.PerformLayout()
+        Me.Grp_Estatisticas.ResumeLayout(False)
+        Me.Grp_Estatisticas.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -311,4 +403,13 @@ Partial Class Frm_ContasCorrentesListas
     Friend WithEvents Txt_Nome2 As TextBox
     Friend WithEvents Txt_Nome1 As TextBox
     Friend WithEvents Txt_Nome As TextBox
+    Friend WithEvents Grp_Estatisticas As GroupBox
+    Friend WithEvents Btm_Primeiro As Button
+    Friend WithEvents Btm_Ultimo As Button
+    Friend WithEvents Txt_Ultimo As TextBox
+    Friend WithEvents Txt_Primeiro As TextBox
+    Friend WithEvents Btm_Busca As Button
+    Friend WithEvents Txt_NomeBusca As TextBox
+    Friend WithEvents Txt_ContaBusca As TextBox
+    Friend WithEvents Txt_AgenciaBusca As TextBox
 End Class
