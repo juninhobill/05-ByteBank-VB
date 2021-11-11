@@ -68,6 +68,10 @@ Namespace Classes.Clientes
 
 #Region "CONSTRUTORES"
 
+        Private Sub New()
+
+        End Sub
+
         ''' <summary>
         ''' Este construtor instancia uma nova classe contacorrente, Devemos passar como parametro o número da agencia e número da conta
         ''' </summary>
@@ -101,7 +105,44 @@ Namespace Classes.Clientes
 
         End Sub
 
-        Private Sub New()
+        Public Sub New(CodigoAgencia As Integer, NumeroConta As Integer, NomeCliente As String)
+
+            If (CodigoAgencia <= 0) Then
+
+                Dim vParametro As String
+                vParametro = NameOf(CodigoAgencia)
+
+                Dim Erro As New ArgumentException("Código da agência menor que zero !!!!", vParametro)
+                Throw Erro
+
+            ElseIf (NumeroConta <= 0) Then
+
+                Dim vParametro As String
+                vParametro = NameOf(NumeroConta)
+
+                Dim Erro As New ArgumentException("Número da conta menor que zero !!!!", vParametro)
+                Throw Erro
+
+            ElseIf (NomeCliente = "") Then
+
+                Dim vParametro As String
+                vParametro = NameOf(NomeCliente)
+
+                Dim Erro As New ArgumentException("Nome do Cliente em branco !!!!", vParametro)
+                Throw Erro
+
+            End If
+
+            agencia = CodigoAgencia
+            Me.numero = NumeroConta
+            m_TotalDeContasCriadas += 1
+
+            m_TaxaOperacao = 30 / m_TotalDeContasCriadas
+
+            Dim Cliente As New Cliente
+            Cliente.nome = NomeCliente
+
+            titular = Cliente
 
         End Sub
 
@@ -165,16 +206,19 @@ Namespace Classes.Clientes
 
             Dim outraConta As New ContaCorrente()
             outraConta = TryCast(obj, ContaCorrente)
-
             If outraConta Is Nothing Then
                 Return False
             End If
-
             If outraConta.agencia = agencia And outraConta.numero = numero Then
                 Return True
             End If
-
             Return False
+
+        End Function
+
+        Public Overrides Function ToString() As String
+
+            Return $"Agência: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome}"
 
         End Function
 

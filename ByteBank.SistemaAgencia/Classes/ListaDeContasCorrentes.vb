@@ -1,8 +1,9 @@
-﻿Imports ByteBank.Bibliotecas.Classes.Clientes
+﻿
+Imports ByteBank.Bibliotecas.Classes.Clientes
 
 Public Class ListaDeContasCorrentes
 
-#Region "PROPRIEDADES"
+#Region "Propriedades"
 
     Private Property _items() As ContaCorrente()
     Private Property _proximaposicao As Integer
@@ -11,13 +12,15 @@ Public Class ListaDeContasCorrentes
         Get
             Return _proximaposicao
         End Get
+
     End Property
+
 
 #End Region
 
-#Region "INDEXADORES"
+#Region "Indexadores"
 
-    Default Public ReadOnly Property item(indice As Integer)
+    Default Public ReadOnly Property Item(indice As Integer)
         Get
             Return GetContaCorrente(indice)
         End Get
@@ -26,7 +29,7 @@ Public Class ListaDeContasCorrentes
 
 #End Region
 
-#Region "CONSTRUTORES"
+#Region "Construtores"
 
     Public Sub New(Optional numeroPosicoesIniciais As Integer = 5)
 
@@ -37,12 +40,16 @@ Public Class ListaDeContasCorrentes
 
 #End Region
 
-#Region "MÉTODOS"
+#Region "Métodos"
+
+    Public Sub MeuMetodo(Optional vString As String = "String Opcional", Optional vInteger As Integer = 10)
+        MsgBox("VString = " + vString + ", vInteger = " + vInteger.ToString)
+    End Sub
 
     Public Sub Adicionar(item As ContaCorrente)
 
         VerificarCapacidadeArrayCopy(_proximaposicao + 1)
-        Console.WriteLine("Novo membro adicionado na posição: " + _proximaposicao.ToString)
+        Console.WriteLine("Novo membro adicionado na posição " + _proximaposicao.ToString)
         _items(_proximaposicao) = item
         _proximaposicao += 1
 
@@ -61,6 +68,7 @@ Public Class ListaDeContasCorrentes
         End If
 
         Dim NovoArray(novoTamanho) As ContaCorrente
+
         Array.Copy(_items, NovoArray, _items.Length)
 
         _items = NovoArray
@@ -102,15 +110,15 @@ Public Class ListaDeContasCorrentes
 
     End Function
 
-    Public Sub Remover(conta As ContaCorrente)
+    Public Sub Remover(Conta As ContaCorrente)
 
-        Dim indice As Integer = posicaoElemento(conta)
+
+        Dim indice As Integer = posicaoElemento(Conta)
         If indice = -1 Then
             Return
         End If
 
         _proximaposicao -= 1
-
         For i As Integer = indice To _proximaposicao - 1
             _items(i) = _items(i + 1)
         Next
@@ -123,7 +131,7 @@ Public Class ListaDeContasCorrentes
         For i As Integer = 0 To _proximaposicao - 1
             elementos += _items(i).agencia.ToString + " - " + _items(i).numero.ToString + vbCrLf
         Next
-        For i As Integer = 0 To _items.Length - 1
+        For i As Integer = _proximaposicao To _items.Length - 1
             elementos += "NULL" + vbCrLf
         Next
 
@@ -136,7 +144,6 @@ Public Class ListaDeContasCorrentes
         If indice < 0 And indice >= _proximaposicao Then
             Throw New ArgumentOutOfRangeException(NameOf(indice))
         End If
-
         Return _items(indice)
 
     End Function
@@ -153,11 +160,11 @@ Public Class ListaDeContasCorrentes
 
     End Sub
 
-    Public Sub AdicionarVariosUmaUm(ParamArray contas As ContaCorrente())
+    Public Sub AdicionarVariosUmAUm(ParamArray contas As ContaCorrente())
 
-        'For i As Integer = 0 To contas.Length - 1
-        '    Adicionar(contas(i))
-        'Next
+        ''For i As Integer = 0 To contas.Length - 1
+        ''    Adicionar(contas(i))
+        ''Next
 
         For Each conta As ContaCorrente In contas
             Adicionar(conta)
@@ -165,6 +172,20 @@ Public Class ListaDeContasCorrentes
 
     End Sub
 
+    Public Function somaNumeros(ParamArray numeros() As Integer) As Integer
+
+        Dim soma As Integer = 0
+        For Each numero As Integer In numeros
+            soma += numero
+        Next
+        Return soma
+
+    End Function
+
+
 #End Region
+
+
+
 
 End Class

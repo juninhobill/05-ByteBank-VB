@@ -2,7 +2,7 @@
 
 Public Class Lista(Of T)
 
-#Region "PROPRIEDADES"
+#Region "Propriedades"
 
     Private Property _items() As T()
     Private Property _proximaposicao As Integer
@@ -11,13 +11,14 @@ Public Class Lista(Of T)
         Get
             Return _proximaposicao
         End Get
+
     End Property
 
 #End Region
 
-#Region "INDEXADORES"
+#Region "Indexadores"
 
-    Default Public ReadOnly Property item(indice As Integer)
+    Default Public ReadOnly Property Item(indice As Integer)
         Get
             Return GetItem(indice)
         End Get
@@ -26,7 +27,7 @@ Public Class Lista(Of T)
 
 #End Region
 
-#Region "CONSTRUTORES"
+#Region "Construtores"
 
     Public Sub New(Optional numeroPosicoesIniciais As Integer = 5)
 
@@ -37,7 +38,7 @@ Public Class Lista(Of T)
 
 #End Region
 
-#Region "MÉTODOS"
+#Region "Métodos"
 
     Public Sub Adicionar(item As T)
 
@@ -60,6 +61,7 @@ Public Class Lista(Of T)
         End If
 
         Dim NovoArray(novoTamanho) As T
+
         Array.Copy(_items, NovoArray, _items.Length)
 
         _items = NovoArray
@@ -102,13 +104,13 @@ Public Class Lista(Of T)
 
     Public Sub Remover(item As T)
 
+
         Dim indice As Integer = posicaoElemento(item)
         If indice = -1 Then
             Return
         End If
 
         _proximaposicao -= 1
-
         For i As Integer = indice To _proximaposicao - 1
             _items(i) = _items(i + 1)
         Next
@@ -120,12 +122,15 @@ Public Class Lista(Of T)
         If indice < 0 And indice >= _proximaposicao Then
             Throw New ArgumentOutOfRangeException(NameOf(indice))
         End If
-
         Return _items(indice)
 
     End Function
 
     Public Sub AdicionarVarios(items As T())
+
+        'For i As Integer = 0 To contas.Length - 1
+        '    Adicionar(contas(i))
+        'Next
 
         For Each item As T In items
             Adicionar(item)
@@ -133,7 +138,11 @@ Public Class Lista(Of T)
 
     End Sub
 
-    Public Sub AdicionarVariosUmaUm(ParamArray items As T())
+    Public Sub AdicionarVariosUmAUm(ParamArray items As T())
+
+        ''For i As Integer = 0 To contas.Length - 1
+        ''    Adicionar(contas(i))
+        ''Next
 
         For Each item As T In items
             Adicionar(item)

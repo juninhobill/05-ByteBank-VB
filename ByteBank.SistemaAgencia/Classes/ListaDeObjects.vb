@@ -1,8 +1,6 @@
-﻿
+﻿Public Class ListaDeObjects
 
-Public Class ListaDeObjects
-
-#Region "PROPRIEDADES"
+#Region "Propriedades"
 
     Private Property _items() As Object()
     Private Property _proximaposicao As Integer
@@ -11,13 +9,14 @@ Public Class ListaDeObjects
         Get
             Return _proximaposicao
         End Get
+
     End Property
 
 #End Region
 
-#Region "INDEXADORES"
+#Region "Indexadores"
 
-    Default Public ReadOnly Property item(indice As Integer)
+    Default Public ReadOnly Property Item(indice As Integer)
         Get
             Return GetObject(indice)
         End Get
@@ -26,7 +25,7 @@ Public Class ListaDeObjects
 
 #End Region
 
-#Region "CONSTRUTORES"
+#Region "Construtores"
 
     Public Sub New(Optional numeroPosicoesIniciais As Integer = 5)
 
@@ -37,7 +36,7 @@ Public Class ListaDeObjects
 
 #End Region
 
-#Region "MÉTODOS"
+#Region "Métodos"
 
     Public Sub Adicionar(item As Object)
 
@@ -60,6 +59,7 @@ Public Class ListaDeObjects
         End If
 
         Dim NovoArray(novoTamanho) As Object
+
         Array.Copy(_items, NovoArray, _items.Length)
 
         _items = NovoArray
@@ -102,13 +102,13 @@ Public Class ListaDeObjects
 
     Public Sub Remover(item As Object)
 
+
         Dim indice As Integer = posicaoElemento(item)
         If indice = -1 Then
             Return
         End If
 
         _proximaposicao -= 1
-
         For i As Integer = indice To _proximaposicao - 1
             _items(i) = _items(i + 1)
         Next
@@ -120,12 +120,15 @@ Public Class ListaDeObjects
         If indice < 0 And indice >= _proximaposicao Then
             Throw New ArgumentOutOfRangeException(NameOf(indice))
         End If
-
         Return _items(indice)
 
     End Function
 
     Public Sub AdicionarVarios(items As Object())
+
+        'For i As Integer = 0 To contas.Length - 1
+        '    Adicionar(contas(i))
+        'Next
 
         For Each item As Object In items
             Adicionar(item)
@@ -133,7 +136,11 @@ Public Class ListaDeObjects
 
     End Sub
 
-    Public Sub AdicionarVariosUmaUm(ParamArray items As Object())
+    Public Sub AdicionarVariosUmAUm(ParamArray items As Object())
+
+        ''For i As Integer = 0 To contas.Length - 1
+        ''    Adicionar(contas(i))
+        ''Next
 
         For Each item As Object In items
             Adicionar(item)
@@ -142,5 +149,8 @@ Public Class ListaDeObjects
     End Sub
 
 #End Region
+
+
+
 
 End Class

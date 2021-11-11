@@ -80,23 +80,28 @@
     <Compile Include="Classes\Lista.vb" />
     <Compile Include="Classes\ListaDeContasCorrentes.vb" />
     <Compile Include="Classes\ListaDeObjects.vb" />
-    <Compile Include="Frm_Principal.Designer.vb">
-      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    <Compile Include="Frm_ContasCorrentesArray.Designer.vb">
+      <DependentUpon>Frm_ContasCorrentesArray.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Principal.vb">
+    <Compile Include="Frm_ContasCorrentesArray.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Principal2.Designer.vb">
-      <DependentUpon>Frm_Principal2.vb</DependentUpon>
+    <Compile Include="Frm_ContasCorrentesListas.Designer.vb">
+      <DependentUpon>Frm_ContasCorrentesListas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Principal2.vb">
+    <Compile Include="Frm_ContasCorrentesListas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal01.Designer.vb">
+      <DependentUpon>Frm_Principal01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal01.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,11 +115,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Frm_Principal.resx">
-      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_ContasCorrentesArray.resx">
+      <DependentUpon>Frm_ContasCorrentesArray.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Principal2.resx">
-      <DependentUpon>Frm_Principal2.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_ContasCorrentesListas.resx">
+      <DependentUpon>Frm_ContasCorrentesListas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal01.resx">
+      <DependentUpon>Frm_Principal01.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
