@@ -20,6 +20,8 @@ Public Class Frm_ContasCorrentesListas
         Grp_AdicionarVarios.Text = "Adicionar Vários"
 
         Btm_AdicionaVarios.Text = "Adicionar"
+        Btm_adicionaVariosShared.Text = "Add Shared"
+        Btm_AdicionaVariosExtension.Text = "Add Ext"
         Lbl_Agencia1.Text = "Conta Corrente 1"
         Lbl_Agencia2.Text = "Conta Corrente 2"
         Lbl_Agencia3.Text = "Conta Corrente 3"
@@ -28,6 +30,7 @@ Public Class Frm_ContasCorrentesListas
         Btm_Primeiro.Text = "Primeiro"
         Btm_Ultimo.Text = "Último"
         Btm_Busca.Text = "Busca"
+        Btm_Ordena.Text = "Ordena"
 
     End Sub
 
@@ -131,6 +134,68 @@ Public Class Frm_ContasCorrentesListas
             MsgBox("Conta Corrente existe na lista")
         Else
             MsgBox("Conta Corrente NÃO existente na lista")
+        End If
+
+    End Sub
+
+    Private Sub Btm_Ordena_Click(sender As Object, e As EventArgs) Handles Btm_Ordena.Click
+
+        Lista.Sort()
+        Txt_Array.Text = EscreverElementosArrayIndexador()
+
+    End Sub
+
+    Private Sub Btm_adicionaVariosShared_Click(sender As Object, e As EventArgs) Handles Btm_adicionaVariosShared.Click
+
+        If Txt_Agencia1.Text <> "" And Txt_Conta1.Text <> "" Then
+            Dim Conta1 As New ContaCorrente(Txt_Agencia1.Text, Txt_Conta1.Text, Txt_Nome1.Text)
+            If Txt_Agencia2.Text <> "" And Txt_Conta2.Text <> "" Then
+                Dim Conta2 As New ContaCorrente(Txt_Agencia2.Text, Txt_Conta2.Text, Txt_Nome2.Text)
+                If txt_Agencia3.Text <> "" And Txt_Conta3.Text <> "" Then
+                    Dim Conta3 As New ContaCorrente(txt_Agencia3.Text, Txt_Conta3.Text, Txt_Nome3.Text)
+                    If Txt_Agencia4.Text <> "" And Txt_Conta4.Text <> "" Then
+                        Dim Conta4 As New ContaCorrente(Txt_Agencia4.Text, Txt_Conta4.Text, Txt_Nome4.Text)
+                        ListaShared.AdicionarVarios(Lista, Conta1, Conta2, Conta3, Conta4)
+                        Txt_Array.Text = EscreverElementosArrayIndexador()
+                    Else
+                        ListaShared.AdicionarVarios(Lista, Conta1, Conta2, Conta3)
+                        Txt_Array.Text = EscreverElementosArrayIndexador()
+                    End If
+                Else
+                    ListaShared.AdicionarVarios(Lista, Conta1, Conta2)
+                    Txt_Array.Text = EscreverElementosArrayIndexador()
+                End If
+            Else
+                ListaShared.AdicionarVarios(Lista, Conta1)
+                Txt_Array.Text = EscreverElementosArrayIndexador()
+            End If
+        End If
+    End Sub
+
+    Private Sub Btm_AdicionaVariosExtension_Click(sender As Object, e As EventArgs) Handles Btm_AdicionaVariosExtension.Click
+
+        If Txt_Agencia1.Text <> "" And Txt_Conta1.Text <> "" Then
+            Dim Conta1 As New ContaCorrente(Txt_Agencia1.Text, Txt_Conta1.Text, Txt_Nome1.Text)
+            If Txt_Agencia2.Text <> "" And Txt_Conta2.Text <> "" Then
+                Dim Conta2 As New ContaCorrente(Txt_Agencia2.Text, Txt_Conta2.Text, Txt_Nome2.Text)
+                If txt_Agencia3.Text <> "" And Txt_Conta3.Text <> "" Then
+                    Dim Conta3 As New ContaCorrente(txt_Agencia3.Text, Txt_Conta3.Text, Txt_Nome3.Text)
+                    If Txt_Agencia4.Text <> "" And Txt_Conta4.Text <> "" Then
+                        Dim Conta4 As New ContaCorrente(Txt_Agencia4.Text, Txt_Conta4.Text, Txt_Nome4.Text)
+                        Lista.AdicionarVariosUmAUm(Conta1, Conta2, Conta3, Conta4)
+                        Txt_Array.Text = EscreverElementosArrayIndexador()
+                    Else
+                        Lista.AdicionarVariosUmAUm(Conta1, Conta2, Conta3)
+                        Txt_Array.Text = EscreverElementosArrayIndexador()
+                    End If
+                Else
+                    Lista.AdicionarVariosUmAUm(Conta1, Conta2)
+                    Txt_Array.Text = EscreverElementosArrayIndexador()
+                End If
+            Else
+                Lista.AdicionarVariosUmAUm(Conta1)
+                Txt_Array.Text = EscreverElementosArrayIndexador()
+            End If
         End If
 
     End Sub

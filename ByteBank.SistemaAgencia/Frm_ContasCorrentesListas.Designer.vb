@@ -56,12 +56,17 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_ContaBusca = New System.Windows.Forms.TextBox()
         Me.Txt_AgenciaBusca = New System.Windows.Forms.TextBox()
         Me.Btm_Busca = New System.Windows.Forms.Button()
+        Me.Btm_Ordena = New System.Windows.Forms.Button()
+        Me.Btm_adicionaVariosShared = New System.Windows.Forms.Button()
+        Me.Btm_AdicionaVariosExtension = New System.Windows.Forms.Button()
         Me.Grp_AdicionarVarios.SuspendLayout()
         Me.Grp_Estatisticas.SuspendLayout()
         Me.SuspendLayout()
         '
         'Grp_AdicionarVarios
         '
+        Me.Grp_AdicionarVarios.Controls.Add(Me.Btm_AdicionaVariosExtension)
+        Me.Grp_AdicionarVarios.Controls.Add(Me.Btm_adicionaVariosShared)
         Me.Grp_AdicionarVarios.Controls.Add(Me.Txt_Nome4)
         Me.Grp_AdicionarVarios.Controls.Add(Me.Txt_Nome3)
         Me.Grp_AdicionarVarios.Controls.Add(Me.Txt_Nome2)
@@ -88,7 +93,7 @@ Partial Class Frm_ContasCorrentesListas
         '
         'Btm_AdicionaVarios
         '
-        Me.Btm_AdicionaVarios.Location = New System.Drawing.Point(331, 242)
+        Me.Btm_AdicionaVarios.Location = New System.Drawing.Point(163, 236)
         Me.Btm_AdicionaVarios.Name = "Btm_AdicionaVarios"
         Me.Btm_AdicionaVarios.Size = New System.Drawing.Size(75, 23)
         Me.Btm_AdicionaVarios.TabIndex = 20
@@ -274,6 +279,7 @@ Partial Class Frm_ContasCorrentesListas
         '
         'Grp_Estatisticas
         '
+        Me.Grp_Estatisticas.Controls.Add(Me.Btm_Ordena)
         Me.Grp_Estatisticas.Controls.Add(Me.Btm_Busca)
         Me.Grp_Estatisticas.Controls.Add(Me.Txt_NomeBusca)
         Me.Grp_Estatisticas.Controls.Add(Me.Txt_ContaBusca)
@@ -351,6 +357,33 @@ Partial Class Frm_ContasCorrentesListas
         Me.Btm_Busca.Text = "Button1"
         Me.Btm_Busca.UseVisualStyleBackColor = True
         '
+        'Btm_Ordena
+        '
+        Me.Btm_Ordena.Location = New System.Drawing.Point(17, 332)
+        Me.Btm_Ordena.Name = "Btm_Ordena"
+        Me.Btm_Ordena.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Ordena.TabIndex = 26
+        Me.Btm_Ordena.Text = "Button1"
+        Me.Btm_Ordena.UseVisualStyleBackColor = True
+        '
+        'Btm_adicionaVariosShared
+        '
+        Me.Btm_adicionaVariosShared.Location = New System.Drawing.Point(255, 236)
+        Me.Btm_adicionaVariosShared.Name = "Btm_adicionaVariosShared"
+        Me.Btm_adicionaVariosShared.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_adicionaVariosShared.TabIndex = 26
+        Me.Btm_adicionaVariosShared.Text = "Button1"
+        Me.Btm_adicionaVariosShared.UseVisualStyleBackColor = True
+        '
+        'Btm_AdicionaVariosExtension
+        '
+        Me.Btm_AdicionaVariosExtension.Location = New System.Drawing.Point(347, 236)
+        Me.Btm_AdicionaVariosExtension.Name = "Btm_AdicionaVariosExtension"
+        Me.Btm_AdicionaVariosExtension.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_AdicionaVariosExtension.TabIndex = 27
+        Me.Btm_AdicionaVariosExtension.Text = "Button1"
+        Me.Btm_AdicionaVariosExtension.UseVisualStyleBackColor = True
+        '
         'Frm_ContasCorrentesListas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -412,4 +445,7 @@ Partial Class Frm_ContasCorrentesListas
     Friend WithEvents Txt_NomeBusca As TextBox
     Friend WithEvents Txt_ContaBusca As TextBox
     Friend WithEvents Txt_AgenciaBusca As TextBox
+    Friend WithEvents Btm_Ordena As Button
+    Friend WithEvents Btm_AdicionaVariosExtension As Button
+    Friend WithEvents Btm_adicionaVariosShared As Button
 End Class

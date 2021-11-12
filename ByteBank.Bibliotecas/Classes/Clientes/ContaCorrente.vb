@@ -6,6 +6,7 @@ Namespace Classes.Clientes
     ''' Esta classe representa uma conta corrente aberta pelo cliente do banco ByteBank
     ''' </summary>
     Public Class ContaCorrente
+        Implements IComparable
 
 #Region "PROPRIEDADES"
 
@@ -219,6 +220,14 @@ Namespace Classes.Clientes
         Public Overrides Function ToString() As String
 
             Return $"Agência: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome}"
+
+        End Function
+
+        Public Function Compareto(Obj As Object) As Integer Implements IComparable.CompareTo
+
+            Dim outraConta As New ContaCorrente()
+            outraConta = TryCast(Obj, ContaCorrente)
+            Return titular.nome.CompareTo(outraConta.titular.nome)
 
         End Function
 

@@ -80,6 +80,8 @@
     <Compile Include="Classes\Lista.vb" />
     <Compile Include="Classes\ListaDeContasCorrentes.vb" />
     <Compile Include="Classes\ListaDeObjects.vb" />
+    <Compile Include="Classes\ListaExtensoesModulo.vb" />
+    <Compile Include="Classes\ListaShared.vb" />
     <Compile Include="Frm_ContasCorrentesArray.Designer.vb">
       <DependentUpon>Frm_ContasCorrentesArray.vb</DependentUpon>
     </Compile>
