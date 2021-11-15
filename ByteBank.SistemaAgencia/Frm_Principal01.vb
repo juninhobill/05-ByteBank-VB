@@ -34,4 +34,10 @@
         F.MdiParent = Me
         F.Show()
     End Sub
+
+    Private Sub SimulaçãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SimulaçãoToolStripMenuItem.Click
+        Dim F As New Frm_Simulacao
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class

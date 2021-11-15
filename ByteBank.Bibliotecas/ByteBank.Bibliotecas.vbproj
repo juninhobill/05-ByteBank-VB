@@ -71,11 +71,13 @@
     <Compile Include="Classes\Clientes\Agencia.vb" />
     <Compile Include="Classes\Clientes\AgenciaDic.vb" />
     <Compile Include="Classes\Clientes\Cliente.vb" />
+    <Compile Include="Classes\Clientes\ClienteAgencia.vb" />
     <Compile Include="Classes\Clientes\ContaCorrente.vb" />
     <Compile Include="Classes\Clientes\OperacaoFinanceiraException.vb" />
     <Compile Include="Classes\Clientes\ValorSacadoMenorSaldoException.vb" />
     <Compile Include="Classes\Externos\Representante.vb" />
     <Compile Include="Classes\Funcionarios\Auxiliar.vb" />
+    <Compile Include="Classes\Funcionarios\Caixa.vb" />
     <Compile Include="Classes\Funcionarios\Desenvolvedor.vb" />
     <Compile Include="Classes\Funcionarios\Designer.vb" />
     <Compile Include="Classes\Funcionarios\Funcionario.vb" />

@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Aleatorio.vb" />
     <Compile Include="Classes\Estagiario.vb" />
     <Compile Include="Classes\Lista.vb" />
     <Compile Include="Classes\ListaDeContasCorrentes.vb" />
@@ -112,6 +113,12 @@
     <Compile Include="Frm_Principal01.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Simulacao.designer.vb">
+      <DependentUpon>Frm_Simulacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Simulacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -143,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal01.resx">
       <DependentUpon>Frm_Principal01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Simulacao.resx">
+      <DependentUpon>Frm_Simulacao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
