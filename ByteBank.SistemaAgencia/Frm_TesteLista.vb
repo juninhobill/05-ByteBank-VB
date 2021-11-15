@@ -174,7 +174,7 @@ Public Class Frm_TesteLista
         Conta1.Depositar(10000)
         Dim Conta2 As New ContaCorrente(277, 4321, "Pedro Santos")
         Conta2.Depositar(5000)
-        Dim Conta3 As New ContaCorrente(277, 9876, "Alberto Luis")
+        Dim Conta3 As New ContaCorrente(500, 9876, "Alberto Luis")
         Conta3.Depositar(7000)
 
         Dim ListaContasCorrentes As New List(Of ContaCorrente)
@@ -191,6 +191,10 @@ Public Class Frm_TesteLista
         ListaContasCorrentes.Sort(New CriterioContaCorrenteSaldo)
 
         MsgBox("Lista de Contas ordenada por saldo: " + String.Join(" , ", ListaContasCorrentes))
+
+        ListaContasCorrentes.Sort(New CriterioContaCorrenteAgenciaNumero)
+
+        MsgBox("Lista de Contas ordenada por Agencia/Número: " + String.Join(" , ", ListaContasCorrentes))
 
     End Sub
 End Class
