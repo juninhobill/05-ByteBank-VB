@@ -223,16 +223,16 @@ Namespace Classes.Clientes
 
         Public Overrides Function ToString() As String
 
-            Return $"Agência: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome}"
+            Return $"Agencia: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome} Saldo: {saldo}"
 
         End Function
 
-        Public Function Compareto(Obj As Object) As Integer Implements IComparable.CompareTo
+        Public Function CompareTo(obj As Object) As Integer Implements IComparable.CompareTo
 
             Dim outraConta As New ContaCorrente()
-            outraConta = TryCast(Obj, ContaCorrente)
-            Return titular.nome.CompareTo(outraConta.titular.nome)
-
+            outraConta = TryCast(obj, ContaCorrente)
+            'Return titular.nome.CompareTo(outraConta.titular.nome)
+            Return saldo.CompareTo(outraConta.saldo)
         End Function
 
 #End Region

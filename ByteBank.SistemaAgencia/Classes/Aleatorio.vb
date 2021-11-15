@@ -15,10 +15,11 @@ Namespace classes
 #Region "CONSTRUTORES"
 
         Public Sub New(_MenorNumero As Integer, _MaiorNumero As Integer)
+
             MenorNumero = _MenorNumero
             MaiorNumero = _MaiorNumero
-        End Sub
 
+        End Sub
 #End Region
 
 #Region "MÉTODOS"

@@ -1,6 +1,5 @@
 ﻿Imports System.Runtime.CompilerServices
 Imports ByteBank.Bibliotecas.Classes.Clientes
-
 Module ListaExtensoesModulo
 
     <Extension()>

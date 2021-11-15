@@ -11,11 +11,11 @@ Namespace Classes.Clientes
 
         Private _ContasCorrentes As IDictionary(Of Integer, ContaCorrente)
 
-
         Public ReadOnly Property ContasCorrentes As IDictionary(Of Integer, ContaCorrente)
             Get
                 Return _ContasCorrentes
             End Get
+
         End Property
 
 #End Region
@@ -31,14 +31,18 @@ Namespace Classes.Clientes
 
 #End Region
 
-#Region "MÉTODOS"
+#Region "METODOS"
 
         Public Sub AbrirContaCorrente(Numero As Integer, Nome As String)
+
             _ContasCorrentes.Add(Numero, New ContaCorrente(agencia, Numero, Nome))
+
         End Sub
 
         Public Sub FecharContaCorrente(Numero As Integer, Nome As String)
+
             _ContasCorrentes.Remove(Numero)
+
         End Sub
 
         Public Function BuscaCC(Numero As Integer) As ContaCorrente
@@ -52,6 +56,7 @@ Namespace Classes.Clientes
             _ContasCorrentes(Numero).titular.nome = Nome
 
         End Sub
+
 
 #End Region
 

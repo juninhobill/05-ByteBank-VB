@@ -1,4 +1,5 @@
-﻿Imports ByteBank.Bibliotecas.Classes.Clientes
+﻿
+Imports ByteBank.Bibliotecas.Classes.Clientes
 Imports ByteBank.Bibliotecas.Classes.Funcionarios
 Imports ByteBank.SistemaAgencia.classes
 
@@ -39,8 +40,8 @@ Public Class Frm_Simulacao
 
         Dim TempoMenorServico As Integer = Txt_TempoMenorServico.Text
         Dim TempoMaiorServico As Integer = Txt_TempoMaiorServico.Text
-        Dim NumeroClieChegamMinutoMinimo As Integer = Txt_NumeroClientesMinimo.Text
-        Dim NumeroClieChegamMinutoMaximo As Integer = Txt_NumeroClientesMaximo.Text
+        Dim NumClieChegamMinutoMinimo As Integer = Txt_NumeroClientesMinimo.Text
+        Dim NumClieChegamMinutoMaximo As Integer = Txt_NumeroClientesMaximo.Text
         Dim NumeroCaixas As Integer = Txt_NumCaixas.Text
         Dim TempoPasso As Integer = Txt_TempoPasso.Text
         Dim TempoMaximoSimulacao As Integer = Txt_TempoSimulacao.Text
@@ -52,43 +53,43 @@ Public Class Frm_Simulacao
         Next
 
         Dim SerieHistoricaServico As New Aleatorio(TempoMenorServico, TempoMaiorServico + 1)
-        Dim SerieHistoricaNumClientes As New Aleatorio(NumeroClieChegamMinutoMinimo, NumeroClieChegamMinutoMaximo + 1)
+        Dim SerieHistoricaNumClientes As New Aleatorio(NumClieChegamMinutoMinimo, NumClieChegamMinutoMaximo + 1)
 
         Dim vContadorMinuto As Integer = 1
         For I As Integer = 1 To TempoMaximoSimulacao
-            'SE FOR MINUTO COMPLETO
+
+            'SE FOR UM MINUTO COMPLETO
 
             If vContadorMinuto = 1 Then
-                ' QUANTOS CLIENTES CHAGRAM NA AGENCIA?
 
+                ' Quandos clientes chegaram na agencia?
                 Dim vNumClientes As Integer = SerieHistoricaNumClientes.getNumeroAleatorio
-                ' CHEGAR CLIENTES NA AGENCIA
-                ' COLOCA-LOS NA FILA
 
-                For J As Integer = 0 To vNumClientes
+                '   CHEGAR CLIENTES NA AGENCIA
+                '   COLOCA-LOS NA FILA
+
+                For J As Integer = 1 To vNumClientes
                     Dim vTempoServico As Integer = SerieHistoricaServico.getNumeroAleatorio
                     AgenciaBancaria.EntrarNaFila(vTempoServico)
-                    Threading.Thread.Sleep(100)
+                    System.Threading.Thread.Sleep(100)
                 Next
-
             End If
 
-            ' FIM DO SE
+            'FIM DO SE
 
             vContadorMinuto += 1
             If vContadorMinuto = 60 Then
                 vContadorMinuto = 1
             End If
 
-            ' INCREMENTAR TEMPO DE SERVIÇO E TEMPO ESPERA
-            AgenciaBancaria.ExecutarAtendimento(1)
+            'INCREMENTAR TEMPO DE SERVICO E TEMPO DE ESPERA
+            AgenciaBancaria.ExecutaAtendimento(1)
 
             'VER SE EXISTE CAIXA DISPONIVEL PARA TIRAR CLIENTES DA FILA
             AgenciaBancaria.SairDaFila()
 
-            'ESCREVER STATUS ATUAL
+            'ESCREVER O STATUS ATUAL
             EscreverAgencia(AgenciaBancaria)
-
 
             'ESCREVER AS ESTATISTICAS
             Lbl_Tempo.Text = "TEMPO DA SIMULAÇÃO: " + ConverteSegundosEmHoras(I)
@@ -97,12 +98,13 @@ Public Class Frm_Simulacao
                 ConverteSegundosEmHoras(Agencia.TempoTotalFila / Agencia.NumeroClienteFila)
 
             Me.Refresh()
-            Threading.Thread.Sleep(TempoPasso)
+            System.Threading.Thread.Sleep(TempoPasso)
         Next
 
     End Sub
 
     Sub EscreverAgencia(AgenciaBancaria As Agencia)
+
         Txt_Caixas.Text = ""
         Txt_Fila.Text = ""
         For I As Integer = 0 To AgenciaBancaria.Caixas.Count - 1
@@ -111,6 +113,7 @@ Public Class Frm_Simulacao
         For I As Integer = 0 To AgenciaBancaria.Fila.Count - 1
             Txt_Fila.Text += AgenciaBancaria.Fila(I).Nome + vbCrLf
         Next
+
     End Sub
 
     Function ConverteSegundosEmHoras(Segundos As Integer) As String
@@ -121,5 +124,4 @@ Public Class Frm_Simulacao
                                 iSpan.Minutes.ToString.PadLeft(2, "0"c) & ":" &
                                 iSpan.Seconds.ToString.PadLeft(2, "0"c)
     End Function
-
 End Class

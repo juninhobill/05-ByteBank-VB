@@ -119,10 +119,17 @@
     <Compile Include="Frm_Simulacao.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_TesteLista.Designer.vb">
+      <DependentUpon>Frm_TesteLista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TesteLista.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -153,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Simulacao.resx">
       <DependentUpon>Frm_Simulacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TesteLista.resx">
+      <DependentUpon>Frm_TesteLista.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
