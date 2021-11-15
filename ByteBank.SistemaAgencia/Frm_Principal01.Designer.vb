@@ -27,6 +27,8 @@ Partial Class Frm_Principal01
         Me.ArquivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContasCorrentesArrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContasCorrentesListasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContasCorrentesAgenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContasCorrentesAgenciaDicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,7 +43,7 @@ Partial Class Frm_Principal01
         '
         'ArquivoToolStripMenuItem
         '
-        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContasCorrentesArrayToolStripMenuItem, Me.ContasCorrentesListasToolStripMenuItem})
+        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContasCorrentesArrayToolStripMenuItem, Me.ContasCorrentesListasToolStripMenuItem, Me.ContasCorrentesAgenciaToolStripMenuItem, Me.ContasCorrentesAgenciaDicToolStripMenuItem})
         Me.ArquivoToolStripMenuItem.Name = "ArquivoToolStripMenuItem"
         Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.ArquivoToolStripMenuItem.Text = "Arquivo"
@@ -49,14 +51,26 @@ Partial Class Frm_Principal01
         'ContasCorrentesArrayToolStripMenuItem
         '
         Me.ContasCorrentesArrayToolStripMenuItem.Name = "ContasCorrentesArrayToolStripMenuItem"
-        Me.ContasCorrentesArrayToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.ContasCorrentesArrayToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.ContasCorrentesArrayToolStripMenuItem.Text = "Contas Correntes Array"
         '
         'ContasCorrentesListasToolStripMenuItem
         '
         Me.ContasCorrentesListasToolStripMenuItem.Name = "ContasCorrentesListasToolStripMenuItem"
-        Me.ContasCorrentesListasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.ContasCorrentesListasToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.ContasCorrentesListasToolStripMenuItem.Text = "Contas Correntes Listas"
+        '
+        'ContasCorrentesAgenciaToolStripMenuItem
+        '
+        Me.ContasCorrentesAgenciaToolStripMenuItem.Name = "ContasCorrentesAgenciaToolStripMenuItem"
+        Me.ContasCorrentesAgenciaToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.ContasCorrentesAgenciaToolStripMenuItem.Text = "Contas Correntes Agencia"
+        '
+        'ContasCorrentesAgenciaDicToolStripMenuItem
+        '
+        Me.ContasCorrentesAgenciaDicToolStripMenuItem.Name = "ContasCorrentesAgenciaDicToolStripMenuItem"
+        Me.ContasCorrentesAgenciaDicToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.ContasCorrentesAgenciaDicToolStripMenuItem.Text = "Contas Correntes Agencia Dic"
         '
         'Frm_Principal01
         '
@@ -81,4 +95,6 @@ Partial Class Frm_Principal01
     Friend WithEvents ArquivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContasCorrentesArrayToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContasCorrentesListasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContasCorrentesAgenciaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContasCorrentesAgenciaDicToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -22,4 +22,16 @@
         F.MdiParent = Me
         F.Show()
     End Sub
+
+    Private Sub ContasCorrentesAgenciaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContasCorrentesAgenciaToolStripMenuItem.Click
+        Dim F As New Frm_ContasCorrentesAgencia
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ContasCorrentesAgenciaDicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContasCorrentesAgenciaDicToolStripMenuItem.Click
+        Dim F As New Frm_ContasCorrentesAgenciaDic
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class

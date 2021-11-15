@@ -82,6 +82,18 @@
     <Compile Include="Classes\ListaDeObjects.vb" />
     <Compile Include="Classes\ListaExtensoesModulo.vb" />
     <Compile Include="Classes\ListaShared.vb" />
+    <Compile Include="Frm_ContasCorrentesAgencia.Designer.vb">
+      <DependentUpon>Frm_ContasCorrentesAgencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ContasCorrentesAgencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ContasCorrentesAgenciaDic.Designer.vb">
+      <DependentUpon>Frm_ContasCorrentesAgenciaDic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ContasCorrentesAgenciaDic.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_ContasCorrentesArray.Designer.vb">
       <DependentUpon>Frm_ContasCorrentesArray.vb</DependentUpon>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_ContasCorrentesAgencia.resx">
+      <DependentUpon>Frm_ContasCorrentesAgencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ContasCorrentesAgenciaDic.resx">
+      <DependentUpon>Frm_ContasCorrentesAgenciaDic.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ContasCorrentesArray.resx">
       <DependentUpon>Frm_ContasCorrentesArray.vb</DependentUpon>
     </EmbeddedResource>

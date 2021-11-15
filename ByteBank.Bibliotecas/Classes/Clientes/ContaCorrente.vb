@@ -217,6 +217,10 @@ Namespace Classes.Clientes
 
         End Function
 
+        Public Overrides Function GetHashCode() As Integer
+            Return agencia.GetHashCode And numero.GetHashCode
+        End Function
+
         Public Overrides Function ToString() As String
 
             Return $"Agência: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome}"

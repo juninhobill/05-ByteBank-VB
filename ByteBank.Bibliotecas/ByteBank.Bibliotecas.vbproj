@@ -68,6 +68,8 @@
     <Compile Include="Classes\Bibliotecas\ClasseTeste.vb" />
     <Compile Include="Classes\Bibliotecas\GerenciadorBonificacao.vb" />
     <Compile Include="Classes\Bibliotecas\IAutenticavel.vb" />
+    <Compile Include="Classes\Clientes\Agencia.vb" />
+    <Compile Include="Classes\Clientes\AgenciaDic.vb" />
     <Compile Include="Classes\Clientes\Cliente.vb" />
     <Compile Include="Classes\Clientes\ContaCorrente.vb" />
     <Compile Include="Classes\Clientes\OperacaoFinanceiraException.vb" />

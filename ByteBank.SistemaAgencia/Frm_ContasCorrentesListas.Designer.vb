@@ -22,7 +22,14 @@ Partial Class Frm_ContasCorrentesListas
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_ContasCorrentesListas))
         Me.Grp_AdicionarVarios = New System.Windows.Forms.GroupBox()
+        Me.Btm_AdicionaVariosExtension = New System.Windows.Forms.Button()
+        Me.Btm_adicionaVariosShared = New System.Windows.Forms.Button()
+        Me.Txt_Nome4 = New System.Windows.Forms.TextBox()
+        Me.Txt_Nome3 = New System.Windows.Forms.TextBox()
+        Me.Txt_Nome2 = New System.Windows.Forms.TextBox()
+        Me.Txt_Nome1 = New System.Windows.Forms.TextBox()
         Me.Btm_AdicionaVarios = New System.Windows.Forms.Button()
         Me.Txt_Conta4 = New System.Windows.Forms.TextBox()
         Me.Txt_Agencia4 = New System.Windows.Forms.TextBox()
@@ -43,22 +50,16 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_Agencia = New System.Windows.Forms.TextBox()
         Me.Lbl_Agencia = New System.Windows.Forms.Label()
         Me.Txt_Nome = New System.Windows.Forms.TextBox()
-        Me.Txt_Nome1 = New System.Windows.Forms.TextBox()
-        Me.Txt_Nome2 = New System.Windows.Forms.TextBox()
-        Me.Txt_Nome3 = New System.Windows.Forms.TextBox()
-        Me.Txt_Nome4 = New System.Windows.Forms.TextBox()
         Me.Grp_Estatisticas = New System.Windows.Forms.GroupBox()
-        Me.Btm_Primeiro = New System.Windows.Forms.Button()
-        Me.Btm_Ultimo = New System.Windows.Forms.Button()
-        Me.Txt_Primeiro = New System.Windows.Forms.TextBox()
-        Me.Txt_Ultimo = New System.Windows.Forms.TextBox()
+        Me.Btm_Ordena = New System.Windows.Forms.Button()
+        Me.Btm_Busca = New System.Windows.Forms.Button()
         Me.Txt_NomeBusca = New System.Windows.Forms.TextBox()
         Me.Txt_ContaBusca = New System.Windows.Forms.TextBox()
         Me.Txt_AgenciaBusca = New System.Windows.Forms.TextBox()
-        Me.Btm_Busca = New System.Windows.Forms.Button()
-        Me.Btm_Ordena = New System.Windows.Forms.Button()
-        Me.Btm_adicionaVariosShared = New System.Windows.Forms.Button()
-        Me.Btm_AdicionaVariosExtension = New System.Windows.Forms.Button()
+        Me.Txt_Ultimo = New System.Windows.Forms.TextBox()
+        Me.Txt_Primeiro = New System.Windows.Forms.TextBox()
+        Me.Btm_Ultimo = New System.Windows.Forms.Button()
+        Me.Btm_Primeiro = New System.Windows.Forms.Button()
         Me.Grp_AdicionarVarios.SuspendLayout()
         Me.Grp_Estatisticas.SuspendLayout()
         Me.SuspendLayout()
@@ -90,6 +91,52 @@ Partial Class Frm_ContasCorrentesListas
         Me.Grp_AdicionarVarios.TabIndex = 15
         Me.Grp_AdicionarVarios.TabStop = False
         Me.Grp_AdicionarVarios.Text = "GroupBox1"
+        '
+        'Btm_AdicionaVariosExtension
+        '
+        Me.Btm_AdicionaVariosExtension.Location = New System.Drawing.Point(347, 236)
+        Me.Btm_AdicionaVariosExtension.Name = "Btm_AdicionaVariosExtension"
+        Me.Btm_AdicionaVariosExtension.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_AdicionaVariosExtension.TabIndex = 27
+        Me.Btm_AdicionaVariosExtension.Text = "Button1"
+        Me.Btm_AdicionaVariosExtension.UseVisualStyleBackColor = True
+        '
+        'Btm_adicionaVariosShared
+        '
+        Me.Btm_adicionaVariosShared.Location = New System.Drawing.Point(255, 236)
+        Me.Btm_adicionaVariosShared.Name = "Btm_adicionaVariosShared"
+        Me.Btm_adicionaVariosShared.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_adicionaVariosShared.TabIndex = 26
+        Me.Btm_adicionaVariosShared.Text = "Button1"
+        Me.Btm_adicionaVariosShared.UseVisualStyleBackColor = True
+        '
+        'Txt_Nome4
+        '
+        Me.Txt_Nome4.Location = New System.Drawing.Point(276, 209)
+        Me.Txt_Nome4.Name = "Txt_Nome4"
+        Me.Txt_Nome4.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_Nome4.TabIndex = 25
+        '
+        'Txt_Nome3
+        '
+        Me.Txt_Nome3.Location = New System.Drawing.Point(6, 209)
+        Me.Txt_Nome3.Name = "Txt_Nome3"
+        Me.Txt_Nome3.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_Nome3.TabIndex = 24
+        '
+        'Txt_Nome2
+        '
+        Me.Txt_Nome2.Location = New System.Drawing.Point(276, 92)
+        Me.Txt_Nome2.Name = "Txt_Nome2"
+        Me.Txt_Nome2.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_Nome2.TabIndex = 23
+        '
+        'Txt_Nome1
+        '
+        Me.Txt_Nome1.Location = New System.Drawing.Point(6, 92)
+        Me.Txt_Nome1.Name = "Txt_Nome1"
+        Me.Txt_Nome1.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_Nome1.TabIndex = 22
         '
         'Btm_AdicionaVarios
         '
@@ -249,34 +296,6 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_Nome.Size = New System.Drawing.Size(130, 20)
         Me.Txt_Nome.TabIndex = 21
         '
-        'Txt_Nome1
-        '
-        Me.Txt_Nome1.Location = New System.Drawing.Point(6, 92)
-        Me.Txt_Nome1.Name = "Txt_Nome1"
-        Me.Txt_Nome1.Size = New System.Drawing.Size(130, 20)
-        Me.Txt_Nome1.TabIndex = 22
-        '
-        'Txt_Nome2
-        '
-        Me.Txt_Nome2.Location = New System.Drawing.Point(276, 92)
-        Me.Txt_Nome2.Name = "Txt_Nome2"
-        Me.Txt_Nome2.Size = New System.Drawing.Size(130, 20)
-        Me.Txt_Nome2.TabIndex = 23
-        '
-        'Txt_Nome3
-        '
-        Me.Txt_Nome3.Location = New System.Drawing.Point(6, 209)
-        Me.Txt_Nome3.Name = "Txt_Nome3"
-        Me.Txt_Nome3.Size = New System.Drawing.Size(130, 20)
-        Me.Txt_Nome3.TabIndex = 24
-        '
-        'Txt_Nome4
-        '
-        Me.Txt_Nome4.Location = New System.Drawing.Point(276, 209)
-        Me.Txt_Nome4.Name = "Txt_Nome4"
-        Me.Txt_Nome4.Size = New System.Drawing.Size(130, 20)
-        Me.Txt_Nome4.TabIndex = 25
-        '
         'Grp_Estatisticas
         '
         Me.Grp_Estatisticas.Controls.Add(Me.Btm_Ordena)
@@ -295,37 +314,23 @@ Partial Class Frm_ContasCorrentesListas
         Me.Grp_Estatisticas.TabStop = False
         Me.Grp_Estatisticas.Text = "GroupBox1"
         '
-        'Btm_Primeiro
+        'Btm_Ordena
         '
-        Me.Btm_Primeiro.Location = New System.Drawing.Point(17, 52)
-        Me.Btm_Primeiro.Name = "Btm_Primeiro"
-        Me.Btm_Primeiro.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_Primeiro.TabIndex = 0
-        Me.Btm_Primeiro.Text = "Button1"
-        Me.Btm_Primeiro.UseVisualStyleBackColor = True
+        Me.Btm_Ordena.Location = New System.Drawing.Point(17, 332)
+        Me.Btm_Ordena.Name = "Btm_Ordena"
+        Me.Btm_Ordena.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Ordena.TabIndex = 26
+        Me.Btm_Ordena.Text = "Button1"
+        Me.Btm_Ordena.UseVisualStyleBackColor = True
         '
-        'Btm_Ultimo
+        'Btm_Busca
         '
-        Me.Btm_Ultimo.Location = New System.Drawing.Point(17, 109)
-        Me.Btm_Ultimo.Name = "Btm_Ultimo"
-        Me.Btm_Ultimo.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_Ultimo.TabIndex = 1
-        Me.Btm_Ultimo.Text = "Button1"
-        Me.Btm_Ultimo.UseVisualStyleBackColor = True
-        '
-        'Txt_Primeiro
-        '
-        Me.Txt_Primeiro.Location = New System.Drawing.Point(17, 26)
-        Me.Txt_Primeiro.Name = "Txt_Primeiro"
-        Me.Txt_Primeiro.Size = New System.Drawing.Size(204, 20)
-        Me.Txt_Primeiro.TabIndex = 2
-        '
-        'Txt_Ultimo
-        '
-        Me.Txt_Ultimo.Location = New System.Drawing.Point(17, 81)
-        Me.Txt_Ultimo.Name = "Txt_Ultimo"
-        Me.Txt_Ultimo.Size = New System.Drawing.Size(204, 20)
-        Me.Txt_Ultimo.TabIndex = 3
+        Me.Btm_Busca.Location = New System.Drawing.Point(17, 227)
+        Me.Btm_Busca.Name = "Btm_Busca"
+        Me.Btm_Busca.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Busca.TabIndex = 25
+        Me.Btm_Busca.Text = "Button1"
+        Me.Btm_Busca.UseVisualStyleBackColor = True
         '
         'Txt_NomeBusca
         '
@@ -348,41 +353,37 @@ Partial Class Frm_ContasCorrentesListas
         Me.Txt_AgenciaBusca.Size = New System.Drawing.Size(130, 20)
         Me.Txt_AgenciaBusca.TabIndex = 22
         '
-        'Btm_Busca
+        'Txt_Ultimo
         '
-        Me.Btm_Busca.Location = New System.Drawing.Point(17, 227)
-        Me.Btm_Busca.Name = "Btm_Busca"
-        Me.Btm_Busca.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_Busca.TabIndex = 25
-        Me.Btm_Busca.Text = "Button1"
-        Me.Btm_Busca.UseVisualStyleBackColor = True
+        Me.Txt_Ultimo.Location = New System.Drawing.Point(17, 81)
+        Me.Txt_Ultimo.Name = "Txt_Ultimo"
+        Me.Txt_Ultimo.Size = New System.Drawing.Size(204, 20)
+        Me.Txt_Ultimo.TabIndex = 3
         '
-        'Btm_Ordena
+        'Txt_Primeiro
         '
-        Me.Btm_Ordena.Location = New System.Drawing.Point(17, 332)
-        Me.Btm_Ordena.Name = "Btm_Ordena"
-        Me.Btm_Ordena.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_Ordena.TabIndex = 26
-        Me.Btm_Ordena.Text = "Button1"
-        Me.Btm_Ordena.UseVisualStyleBackColor = True
+        Me.Txt_Primeiro.Location = New System.Drawing.Point(17, 26)
+        Me.Txt_Primeiro.Name = "Txt_Primeiro"
+        Me.Txt_Primeiro.Size = New System.Drawing.Size(204, 20)
+        Me.Txt_Primeiro.TabIndex = 2
         '
-        'Btm_adicionaVariosShared
+        'Btm_Ultimo
         '
-        Me.Btm_adicionaVariosShared.Location = New System.Drawing.Point(255, 236)
-        Me.Btm_adicionaVariosShared.Name = "Btm_adicionaVariosShared"
-        Me.Btm_adicionaVariosShared.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_adicionaVariosShared.TabIndex = 26
-        Me.Btm_adicionaVariosShared.Text = "Button1"
-        Me.Btm_adicionaVariosShared.UseVisualStyleBackColor = True
+        Me.Btm_Ultimo.Location = New System.Drawing.Point(17, 109)
+        Me.Btm_Ultimo.Name = "Btm_Ultimo"
+        Me.Btm_Ultimo.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Ultimo.TabIndex = 1
+        Me.Btm_Ultimo.Text = "Button1"
+        Me.Btm_Ultimo.UseVisualStyleBackColor = True
         '
-        'Btm_AdicionaVariosExtension
+        'Btm_Primeiro
         '
-        Me.Btm_AdicionaVariosExtension.Location = New System.Drawing.Point(347, 236)
-        Me.Btm_AdicionaVariosExtension.Name = "Btm_AdicionaVariosExtension"
-        Me.Btm_AdicionaVariosExtension.Size = New System.Drawing.Size(75, 23)
-        Me.Btm_AdicionaVariosExtension.TabIndex = 27
-        Me.Btm_AdicionaVariosExtension.Text = "Button1"
-        Me.Btm_AdicionaVariosExtension.UseVisualStyleBackColor = True
+        Me.Btm_Primeiro.Location = New System.Drawing.Point(17, 52)
+        Me.Btm_Primeiro.Name = "Btm_Primeiro"
+        Me.Btm_Primeiro.Size = New System.Drawing.Size(75, 23)
+        Me.Btm_Primeiro.TabIndex = 0
+        Me.Btm_Primeiro.Text = "Button1"
+        Me.Btm_Primeiro.UseVisualStyleBackColor = True
         '
         'Frm_ContasCorrentesListas
         '
@@ -398,6 +399,7 @@ Partial Class Frm_ContasCorrentesListas
         Me.Controls.Add(Me.Txt_Conta)
         Me.Controls.Add(Me.Txt_Agencia)
         Me.Controls.Add(Me.Lbl_Agencia)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Frm_ContasCorrentesListas"
