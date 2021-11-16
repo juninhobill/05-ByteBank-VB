@@ -179,22 +179,89 @@ Public Class Frm_TesteLista
 
         Dim ListaContasCorrentes As New List(Of ContaCorrente)
         ListaContasCorrentes.Add(Conta1)
+        ListaContasCorrentes.Add(Nothing)
         ListaContasCorrentes.Add(Conta2)
+        ListaContasCorrentes.Add(Nothing)
         ListaContasCorrentes.Add(Conta3)
 
         MsgBox("Lista de Contas Original: " + String.Join(" , ", ListaContasCorrentes))
 
-        ListaContasCorrentes.Sort(New CriterioContaCorrenteNome)
+        'Dim ListaAuxiliar As New List(Of ContaCorrente)
+        'For I As Integer = 0 To ListaContasCorrentes.Count - 1
+        '    If Not (ListaContasCorrentes(I) Is Nothing) Then
+        '        ListaAuxiliar.Add(ListaContasCorrentes(I))
+        '    End If
+        'Next
 
-        MsgBox("Lista de Contas ordenada por nome: " + String.Join(" , ", ListaContasCorrentes))
+        Dim ListaAuxiliar As IEnumerable(Of ContaCorrente) =
+            ListaContasCorrentes.Where(Function(conta As ContaCorrente) Not (conta Is Nothing))
 
-        ListaContasCorrentes.Sort(New CriterioContaCorrenteSaldo)
+        'ListaContasCorrentes.Sort(New CriterioContaCorrenteNome)
+        Dim X As IEnumerable(Of ContaCorrente) =
+            ListaAuxiliar.OrderBy(Function(conta As ContaCorrente) conta.titular.nome)
 
-        MsgBox("Lista de Contas ordenada por saldo: " + String.Join(" , ", ListaContasCorrentes))
+        MsgBox("Lista de Contas ordenada por nome: " + String.Join(" , ", X))
 
-        ListaContasCorrentes.Sort(New CriterioContaCorrenteAgenciaNumero)
+        'ListaContasCorrentes.Sort(New CriterioContaCorrenteSaldo)
 
-        MsgBox("Lista de Contas ordenada por Agencia/Número: " + String.Join(" , ", ListaContasCorrentes))
+        Dim Y As IEnumerable(Of ContaCorrente) =
+            ListaAuxiliar.OrderBy(Function(conta As ContaCorrente) conta.saldo)
+
+        MsgBox("Lista de Contas ordenada por nome: " + String.Join(" , ", Y))
+
+        'ListaContasCorrentes.Sort(New CriterioContaCorrenteAgenciaNumero)
+
+        Dim Z As IEnumerable(Of ContaCorrente) = ListaAuxiliar _
+        .OrderBy(Function(conta As ContaCorrente) conta.agencia) _
+        .OrderBy(Function(conta As ContaCorrente) conta.numero)
+
+        MsgBox("Lista de Contas ordenada por nome: " + String.Join(" , ", Z))
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+        Dim Conta1 As New ContaCorrente(277, 1234, "João Silva")
+        Conta1.Depositar(10000)
+        Dim Conta2 As New ContaCorrente(277, 4321, "Pedro Santos")
+        Conta2.Depositar(5000)
+        Dim Conta3 As New ContaCorrente(500, 9876, "Alberto Luis")
+        Conta3.Depositar(7000)
+
+        Dim ListaContasCorrentes As New List(Of ContaCorrente)
+        ListaContasCorrentes.Add(Conta1)
+        ListaContasCorrentes.Add(Nothing)
+        ListaContasCorrentes.Add(Conta2)
+        ListaContasCorrentes.Add(Nothing)
+        ListaContasCorrentes.Add(Conta3)
+
+        Dim ListaContasCorrentes2 As New List(Of ContaCorrente)
+        ListaContasCorrentes.Add(Conta1)
+        ListaContasCorrentes.Add(Conta2)
+        ListaContasCorrentes.Add(Conta3)
+
+        Dim ListaAuxiliar As IEnumerable(Of ContaCorrente) = ListaContasCorrentes _
+            .Where(Function(conta As ContaCorrente) Not (conta Is Nothing)) _
+            .OrderBy(Function(conta As ContaCorrente) conta.titular.nome)
+
+        Dim MaiorSaldo2 As Double = ListaContasCorrentes _
+            .Where(Function(conta As ContaCorrente) Not (conta Is Nothing)) _
+            .OrderBy(Function(conta As ContaCorrente) conta.titular.nome) _
+            .Max(Function(conta As ContaCorrente) conta.saldo)
+
+        MsgBox("Lista de Contas ordenada por nome: " + String.Join(" , ", ListaAuxiliar))
+
+        Dim MenorSaldo As Double = ListaAuxiliar.Min(Function(conta As ContaCorrente) conta.saldo)
+        MsgBox("O menor saldo é de: " + MenorSaldo.ToString)
+
+        Dim MaiorSaldo As Double = ListaAuxiliar.Max(Function(conta As ContaCorrente) conta.saldo)
+        MsgBox("O maior saldo é de: " + MaiorSaldo.ToString)
+
+        Dim ListaAuxiliarConcatenada As IEnumerable(Of ContaCorrente) = ListaContasCorrentes _
+            .Where(Function(conta As ContaCorrente) Not (conta Is Nothing)) _
+            .Concat(ListaContasCorrentes2) _
+            .OrderBy(Function(conta As ContaCorrente) conta.titular.nome)
+        MsgBox("Lista de Contas concatenadas: " + String.Join(" , ", ListaAuxiliarConcatenada))
 
     End Sub
 End Class
