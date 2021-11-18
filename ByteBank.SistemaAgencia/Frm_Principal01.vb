@@ -46,4 +46,10 @@
         F.MdiParent = Me
         F.Show()
     End Sub
+
+    Private Sub ManutencaoListaViewDTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoListaViewDTToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoCCDataTable
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class

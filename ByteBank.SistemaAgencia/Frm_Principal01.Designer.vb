@@ -32,6 +32,7 @@ Partial Class Frm_Principal01
         Me.SimulaçãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutencaoCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutençãoListaViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutencaoListaViewDTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -83,7 +84,7 @@ Partial Class Frm_Principal01
         '
         'ManutencaoCCToolStripMenuItem
         '
-        Me.ManutencaoCCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManutençãoListaViewToolStripMenuItem})
+        Me.ManutencaoCCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManutençãoListaViewToolStripMenuItem, Me.ManutencaoListaViewDTToolStripMenuItem})
         Me.ManutencaoCCToolStripMenuItem.Name = "ManutencaoCCToolStripMenuItem"
         Me.ManutencaoCCToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
         Me.ManutencaoCCToolStripMenuItem.Text = "Manutenção CC"
@@ -91,8 +92,14 @@ Partial Class Frm_Principal01
         'ManutençãoListaViewToolStripMenuItem
         '
         Me.ManutençãoListaViewToolStripMenuItem.Name = "ManutençãoListaViewToolStripMenuItem"
-        Me.ManutençãoListaViewToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ManutençãoListaViewToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.ManutençãoListaViewToolStripMenuItem.Text = "Manutenção ListaView"
+        '
+        'ManutencaoListaViewDTToolStripMenuItem
+        '
+        Me.ManutencaoListaViewDTToolStripMenuItem.Name = "ManutencaoListaViewDTToolStripMenuItem"
+        Me.ManutencaoListaViewDTToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ManutencaoListaViewDTToolStripMenuItem.Text = "Manutencao ListaViewDT"
         '
         'Frm_Principal01
         '
@@ -122,4 +129,5 @@ Partial Class Frm_Principal01
     Friend WithEvents SimulaçãoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutencaoCCToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutençãoListaViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutencaoListaViewDTToolStripMenuItem As ToolStripMenuItem
 End Class

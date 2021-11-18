@@ -264,4 +264,219 @@ Public Class Frm_TesteLista
         MsgBox("Lista de Contas concatenadas: " + String.Join(" , ", ListaAuxiliarConcatenada))
 
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+        ' #################################################################################
+        ' Criar uma lista de contas correntes e clientes
+        ' #################################################################################
+
+        Dim Cliente As New List(Of Cliente)
+
+        Cliente.Add(CriarCliente("123456789", "João Tavela", "Médico"))
+        Cliente.Add(CriarCliente("987654321", "José Silva", "Engenheiro"))
+        Cliente.Add(CriarCliente("543409789", "Alberto Luis", "Bombeiro"))
+        Cliente.Add(CriarCliente("543456789", "Luis Castro", "Dentista"))
+        Cliente.Add(CriarCliente("983456789", "Diogo Barbosa", "Mecanico"))
+        Cliente.Add(CriarCliente("873456789", "Eduardo Andrade", "Analista de Sistemas"))
+
+        Dim Contas As New List(Of ContaCorrente)
+
+        Contas.Add(New ContaCorrente(277, 1234532))
+        Contas(0).titular = Cliente(0)
+        Contas.Add(New ContaCorrente(277, 1239832))
+        Contas(1).titular = Cliente(0)
+        Contas.Add(New ContaCorrente(277, 9345372))
+        Contas(2).titular = Cliente(2)
+        Contas.Add(New ContaCorrente(277, 5434532))
+        Contas(3).titular = Cliente(1)
+        Contas.Add(New ContaCorrente(277, 8734532))
+        Contas(4).titular = Cliente(1)
+        Contas.Add(New ContaCorrente(277, 1344532))
+        Contas(5).titular = Cliente(3)
+        Contas.Add(New ContaCorrente(277, 5434531))
+        Contas(6).titular = Cliente(3)
+        Contas.Add(New ContaCorrente(277, 7654532))
+        Contas(7).titular = Cliente(4)
+        Contas.Add(New ContaCorrente(277, 9875732))
+        Contas(8).titular = Cliente(5)
+
+        ' #################################################################################
+        ' Criar tabela de contas correntes
+        ' #################################################################################
+
+        ' Conta Corrente: Agencia (Int), Conta (Int), cpf (String), saldo (Double)
+
+        Dim Dt As New DataTable
+
+        Dt.Columns.Add(CriarColuna("Agencia", "System.Int32"))
+        Dt.Columns.Add(CriarColuna("Conta", "System.Int32"))
+        Dt.Columns.Add(CriarColuna("CPF", "System.String"))
+        Dt.Columns.Add(CriarColuna("Saldo", "System.Double"))
+
+        ' Definir chave primária 
+
+        Dim vArrayChavesContas(1) As DataColumn
+        Dt.Columns("Agencia").AllowDBNull = False
+        Dt.Columns("Conta").AllowDBNull = False
+        vArrayChavesContas(0) = Dt.Columns("Agencia")
+        vArrayChavesContas(1) = Dt.Columns("Conta")
+        Dt.PrimaryKey = vArrayChavesContas
+
+        ' Nome da tabela
+
+        Dt.TableName = "Contas Correntes"
+
+        ' #################################################################################
+        ' Criar a tabela de clientes
+        ' #################################################################################
+
+        Dim Dt2 As New DataTable
+        Dt2.Columns.Add(CriarColuna("CPF", "System.String"))
+        Dt2.Columns.Add(CriarColuna("Nome", "System.String"))
+        Dt2.Columns.Add(CriarColuna("Profissao", "System.String"))
+
+        ' Criando chave primária para cliente
+
+        Dim vArrayChavesCliente(0) As DataColumn
+        Dt2.Columns("CPF").AllowDBNull = False
+        vArrayChavesCliente(0) = Dt2.Columns("CPF")
+        Dt2.PrimaryKey = vArrayChavesCliente
+
+        ' Nome da tabela
+
+        Dt2.TableName = "Clientes"
+
+        ' #################################################################################
+        ' Criar o dataset
+        ' #################################################################################
+
+        Dim DS As New DataSet
+        DS.Tables.Add(Dt)
+        DS.Tables.Add(Dt2)
+
+        ' #################################################################################
+        ' Criar a chave estrangeira
+        ' Clientes -----> Contas Correntes (FK)
+        ' #################################################################################
+
+        Dim FKClientesCC As New ForeignKeyConstraint("FKClientesCC", DS.Tables("Clientes").Columns("CPF"),
+                                                     DS.Tables("Contas Correntes").Columns("CPF"))
+        FKClientesCC.DeleteRule = Rule.None
+        DS.Tables("Contas Correntes").Constraints.Add(FKClientesCC)
+
+        ' #################################################################################
+        ' Incluir dados da tabela de clientes do dataset
+        ' #################################################################################
+
+        For I As Integer = 0 To Cliente.Count - 1
+            Dim ClienteAtual As Cliente = Cliente(I)
+            Dim Dr As DataRow = DS.Tables("Clientes").NewRow
+
+            Dr(0) = ClienteAtual.cpf
+            Dr(1) = ClienteAtual.nome
+            Dr(2) = ClienteAtual.profissao
+            DS.Tables("Clientes").Rows.Add(Dr)
+        Next
+
+        ' #################################################################################
+        ' Incluir dados da tabela de contas correntes do dataset
+        ' #################################################################################
+
+        For I As Integer = 0 To Contas.Count - 1
+            Dim ContaAtual As ContaCorrente = Contas(I)
+            Dim Dr As DataRow = DS.Tables("Contas Correntes").NewRow
+
+            Dr(0) = ContaAtual.agencia
+            Dr(1) = ContaAtual.numero
+            Dr(2) = ContaAtual.titular.cpf
+            Dr(3) = ContaAtual.saldo
+            DS.Tables("Contas Correntes").Rows.Add(Dr)
+        Next
+
+        ' #################################################################################
+        ' Exibir dados do dataset
+        ' #################################################################################
+
+        'For I As Integer = 0 To DS.Tables.Count - 1
+        '    Dim DtX As New DataTable
+        '    DtX = DS.Tables(I)
+        '    For J As Integer = 0 To DtX.Rows.Count - 1
+        '        Dim vSaida As String = ""
+        '        For K As Integer = 0 To DtX.Columns.Count - 1
+        '            vSaida += "Tabela => " + DS.Tables(I).TableName.ToString + " - Campo => " + DtX.Columns(K).ColumnName +
+        '                " - Valor => " + DtX.Rows(J)(K).ToString + vbCrLf
+        '        Next
+        '        MsgBox(vSaida)
+        '    Next
+        'Next
+
+        ' #################################################################################
+        ' Criação de filtro para obter contas correntes de um correntista
+        ' #################################################################################
+
+        Dim vCriterio As String = "CPF = '987654321'"
+        Dim DtFiltro As DataTable = DS.Tables("Contas Correntes").Clone
+        Dim DrLinhas As DataRow() = DS.Tables("Contas Correntes").Select(vCriterio)
+        For Each row As DataRow In DrLinhas
+            DtFiltro.ImportRow(row)
+        Next
+
+        'For I As Integer = 0 To DtFiltro.Rows.Count - 1
+        '    Dim vSaida As String = ""
+        '    For J As Integer = 0 To DtFiltro.Columns.Count - 1
+        '        vSaida += " - Campo => " + DtFiltro.Columns(J).ColumnName +
+        '            " - Valor => " + DtFiltro.Rows(I)(J).ToString + vbCrLf
+        '    Next
+        '    MsgBox(vSaida)
+        'Next
+
+        ' #################################################################################
+        ' Ordenar a tabela de clientes por nome
+        ' #################################################################################
+
+        Dim DtView As DataView
+        DtView = DS.Tables("Clientes").DefaultView
+        Dim vCriterioOrdenacao As String = "Nome"
+        DtView.Sort = vCriterioOrdenacao
+        Dim DtOrdenado As New DataTable
+        DtOrdenado = DtView.ToTable
+
+        ' #################################################################################
+        ' Filtrando e ordenando ao mesmo tempo
+        ' #################################################################################
+
+        Dim DtView2 As New DataView(DS.Tables("Contas Correntes"), "CPF = '987654321'", "CPF",
+                                    DataViewRowState.CurrentRows)
+
+        ' #################################################################################
+        ' Excluindo linhas da tabela
+        ' #################################################################################
+
+        'DS.Tables("Contas Correntes").Rows(0).Delete()
+        'DS.Tables("Clientes").Rows(0).Delete()
+
+        Dim vCriterio2 As String = "CPF = '987654321'"
+        Dim DrLinhas2 As DataRow() = DS.Tables("Contas Correntes").Select(vCriterio2)
+        For Each row As DataRow In DrLinhas
+            DS.Tables("Contas Correntes").Rows.Remove(row)
+        Next
+
+    End Sub
+
+    Function CriarColuna(NomeColuna As String, TipoColuna As String) As DataColumn
+        Dim Dc As New DataColumn
+        Dc.ColumnName = NomeColuna
+        Dc.DataType = System.Type.GetType(TipoColuna)
+        Return Dc
+    End Function
+
+    Function CriarCliente(CPF As String, Nome As String, Profissao As String) As Cliente
+        Dim C As New Cliente
+        C.cpf = CPF
+        C.nome = Nome
+        C.profissao = Profissao
+        Return C
+    End Function
+
 End Class

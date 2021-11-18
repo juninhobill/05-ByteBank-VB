@@ -89,6 +89,12 @@
     <Compile Include="Frm_ContaCorrente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_ContaCorrenteDT.Designer.vb">
+      <DependentUpon>Frm_ContaCorrenteDT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ContaCorrenteDT.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_ContasCorrentesAgencia.Designer.vb">
       <DependentUpon>Frm_ContasCorrentesAgencia.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="Frm_TesteLista.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_ManutencaoCCDataTable.Designer.vb">
+      <DependentUpon>Frm_ManutencaoCCDataTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ManutencaoCCDataTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -157,6 +169,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Frm_ContaCorrente.resx">
       <DependentUpon>Frm_ContaCorrente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ContaCorrenteDT.resx">
+      <DependentUpon>Frm_ContaCorrenteDT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ContasCorrentesAgencia.resx">
       <DependentUpon>Frm_ContasCorrentesAgencia.vb</DependentUpon>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TesteLista.resx">
       <DependentUpon>Frm_TesteLista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoCCDataTable.resx">
+      <DependentUpon>Frm_ManutencaoCCDataTable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
