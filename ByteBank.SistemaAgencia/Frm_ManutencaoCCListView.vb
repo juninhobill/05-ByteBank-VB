@@ -1,4 +1,5 @@
-﻿Imports ByteBank.Bibliotecas.Classes.Clientes
+﻿Imports System.IO
+Imports ByteBank.Bibliotecas.Classes.Clientes
 
 Public Class Frm_ManutencaoCCListView
 
@@ -25,12 +26,20 @@ Public Class Frm_ManutencaoCCListView
     End Sub
 
     Sub InicializacaoContas()
-        ListaContas.Add(New ContaCorrente(277, 123456, "João Tavela"))
-        ListaContas.Add(New ContaCorrente(277, 198456, "Sergio Silva"))
-        ListaContas.Add(New ContaCorrente(277, 120956, "Julio Castro"))
-        ListaContas.Add(New ContaCorrente(277, 154456, "Junior Matos"))
-        ListaContas.Add(New ContaCorrente(277, 132456, "José Firmino"))
-        ListaContas.Add(New ContaCorrente(277, 128756, "Pedro Santos"))
+
+        Dim NomeArquivo As String = "ListaContasCorrentes.csv"
+        Using Fs As New FileStream(NomeArquivo, FileMode.Open)
+            Using Leitura As New StreamReader(Fs)
+                While Not Leitura.EndOfStream
+                    Dim linha As String = Leitura.ReadLine
+                    Dim vetorLinha() As String = linha.Split(";")
+                    Dim CC As New ContaCorrente(Val(vetorLinha(0)), Val(vetorLinha(1)), vetorLinha(2))
+                    CC.Depositar(Val(vetorLinha(3)) - 100)
+                    ListaContas.Add(CC)
+                End While
+            End Using
+        End Using
+
     End Sub
 
     Sub FormatarListView()
@@ -130,4 +139,21 @@ Public Class Frm_ManutencaoCCListView
         AtualizarListView()
     End Sub
 
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+
+        Dim NomeArquivo As String = "ListaContasCorrentes.csv"
+        Using Fs As New FileStream(NomeArquivo, FileMode.Create)
+            Using Escrita As New StreamWriter(Fs)
+                For I As Integer = 0 To ListaContas.Count - 1
+                    Dim Linha As String = ""
+                    Linha += ListaContas(I).agencia.ToString + ";"
+                    Linha += ListaContas(I).numero.ToString + ";"
+                    Linha += ListaContas(I).titular.nome.ToString + ";"
+                    Linha += ListaContas(I).saldo.ToString
+                    Escrita.WriteLine(Linha)
+                Next
+            End Using
+        End Using
+
+    End Sub
 End Class

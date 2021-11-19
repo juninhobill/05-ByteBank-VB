@@ -29,9 +29,10 @@ Partial Class Frm_ManutencaoCCListView
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Grp_CriterioOrdenacao = New System.Windows.Forms.GroupBox()
-        Me.Rb_Conta = New System.Windows.Forms.RadioButton()
-        Me.Rb_Nome = New System.Windows.Forms.RadioButton()
         Me.Rb_Saldo = New System.Windows.Forms.RadioButton()
+        Me.Rb_Nome = New System.Windows.Forms.RadioButton()
+        Me.Rb_Conta = New System.Windows.Forms.RadioButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Grp_Lista.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Grp_CriterioOrdenacao.SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class Frm_ManutencaoCCListView
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.ToolStripButton1, Me.SaveToolStripButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(530, 25)
@@ -96,16 +97,16 @@ Partial Class Frm_ManutencaoCCListView
         Me.Grp_CriterioOrdenacao.TabStop = False
         Me.Grp_CriterioOrdenacao.Text = "GroupBox1"
         '
-        'Rb_Conta
+        'Rb_Saldo
         '
-        Me.Rb_Conta.AutoSize = True
-        Me.Rb_Conta.Location = New System.Drawing.Point(7, 29)
-        Me.Rb_Conta.Name = "Rb_Conta"
-        Me.Rb_Conta.Size = New System.Drawing.Size(90, 17)
-        Me.Rb_Conta.TabIndex = 0
-        Me.Rb_Conta.TabStop = True
-        Me.Rb_Conta.Text = "RadioButton1"
-        Me.Rb_Conta.UseVisualStyleBackColor = True
+        Me.Rb_Saldo.AutoSize = True
+        Me.Rb_Saldo.Location = New System.Drawing.Point(408, 29)
+        Me.Rb_Saldo.Name = "Rb_Saldo"
+        Me.Rb_Saldo.Size = New System.Drawing.Size(90, 17)
+        Me.Rb_Saldo.TabIndex = 2
+        Me.Rb_Saldo.TabStop = True
+        Me.Rb_Saldo.Text = "RadioButton3"
+        Me.Rb_Saldo.UseVisualStyleBackColor = True
         '
         'Rb_Nome
         '
@@ -118,16 +119,25 @@ Partial Class Frm_ManutencaoCCListView
         Me.Rb_Nome.Text = "RadioButton2"
         Me.Rb_Nome.UseVisualStyleBackColor = True
         '
-        'Rb_Saldo
+        'Rb_Conta
         '
-        Me.Rb_Saldo.AutoSize = True
-        Me.Rb_Saldo.Location = New System.Drawing.Point(408, 29)
-        Me.Rb_Saldo.Name = "Rb_Saldo"
-        Me.Rb_Saldo.Size = New System.Drawing.Size(90, 17)
-        Me.Rb_Saldo.TabIndex = 2
-        Me.Rb_Saldo.TabStop = True
-        Me.Rb_Saldo.Text = "RadioButton3"
-        Me.Rb_Saldo.UseVisualStyleBackColor = True
+        Me.Rb_Conta.AutoSize = True
+        Me.Rb_Conta.Location = New System.Drawing.Point(7, 29)
+        Me.Rb_Conta.Name = "Rb_Conta"
+        Me.Rb_Conta.Size = New System.Drawing.Size(90, 17)
+        Me.Rb_Conta.TabIndex = 0
+        Me.Rb_Conta.TabStop = True
+        Me.Rb_Conta.Text = "RadioButton1"
+        Me.Rb_Conta.UseVisualStyleBackColor = True
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "&Save"
         '
         'Frm_ManutencaoCCListView
         '
@@ -162,4 +172,5 @@ Partial Class Frm_ManutencaoCCListView
     Friend WithEvents Rb_Saldo As RadioButton
     Friend WithEvents Rb_Nome As RadioButton
     Friend WithEvents Rb_Conta As RadioButton
+    Friend WithEvents SaveToolStripButton As ToolStripButton
 End Class
