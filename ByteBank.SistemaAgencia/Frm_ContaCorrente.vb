@@ -7,30 +7,31 @@ Public Class Frm_ContaCorrente
     Public Property Conta As ContaCorrente
     Public Property Retorno As Boolean
 
+
 #End Region
 
 #Region "CONSTRUTORES"
     Public Sub New()
 
-        ' This call is required by the designer.
+        ' Esta chamada é requerida pelo designer.
         InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-
         Me.Text = "Conta Corrente"
-        Lbl_ContaCorrente.Text = "Conta Corrente"
         Retorno = False
+        Lbl_ContaCorrente.Text = "Conta Corrente"
+
+        ' Adicione qualquer inicialização após a chamada InitializeComponent().
 
     End Sub
 
+
 #End Region
 
-#Region "MÉTODOS"
+#Region "METODOS"
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub SalvarToolStripButton_Click(sender As Object, e As EventArgs) Handles SalvarToolStripButton.Click
         Retorno = True
-        Dim ContaAuxiliar As New ContaCorrente(Txt_Agencia.Text, Txt_Conta.Text, Txt_Nome.Text)
-        Conta = ContaAuxiliar
+        Dim ContaAux As New ContaCorrente(Txt_Agencia.Text, Txt_Conta.Text, Txt_Nome.Text)
+        Conta = ContaAux
         Me.Close()
     End Sub
 

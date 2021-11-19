@@ -223,7 +223,7 @@ Namespace Classes.Clientes
 
         Public Overrides Function ToString() As String
 
-            Return $"Agencia: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome} Saldo: {saldo}"
+            Return $"Agencia: {agencia.ToString} Conta: {numero.ToString} Nome: {titular.nome} Saldo: {saldo.ToString}"
 
         End Function
 
@@ -231,8 +231,8 @@ Namespace Classes.Clientes
 
             Dim outraConta As New ContaCorrente()
             outraConta = TryCast(obj, ContaCorrente)
-            'Return titular.nome.CompareTo(outraConta.titular.nome)
-            Return saldo.CompareTo(outraConta.saldo)
+            'Return saldo.CompareTo(outraConta.saldo)
+            Return titular.nome.CompareTo(outraConta.titular.nome)
         End Function
 
 #End Region

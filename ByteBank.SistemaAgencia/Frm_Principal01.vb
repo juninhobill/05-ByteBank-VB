@@ -41,13 +41,13 @@
         F.Show()
     End Sub
 
-    Private Sub ManutençãoListaViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoListaViewToolStripMenuItem.Click
+    Private Sub ManutençãoListViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoListViewToolStripMenuItem.Click
         Dim F As New Frm_ManutencaoCCListView
         F.MdiParent = Me
         F.Show()
     End Sub
 
-    Private Sub ManutencaoListaViewDTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoListaViewDTToolStripMenuItem.Click
+    Private Sub ManutençãoListViewDTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoListViewDTToolStripMenuItem.Click
         Dim F As New Frm_ManutencaoCCDataTable
         F.MdiParent = Me
         F.Show()

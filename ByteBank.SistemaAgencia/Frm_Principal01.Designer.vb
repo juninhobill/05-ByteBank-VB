@@ -30,15 +30,15 @@ Partial Class Frm_Principal01
         Me.ContasCorrentesAgenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContasCorrentesAgenciaDicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SimulaçãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManutencaoCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManutençãoListaViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManutencaoListaViewDTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoListViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoListViewDTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.ManutencaoCCToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.ManutençãoCCToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -82,24 +82,24 @@ Partial Class Frm_Principal01
         Me.SimulaçãoToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.SimulaçãoToolStripMenuItem.Text = "Simulação"
         '
-        'ManutencaoCCToolStripMenuItem
+        'ManutençãoCCToolStripMenuItem
         '
-        Me.ManutencaoCCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManutençãoListaViewToolStripMenuItem, Me.ManutencaoListaViewDTToolStripMenuItem})
-        Me.ManutencaoCCToolStripMenuItem.Name = "ManutencaoCCToolStripMenuItem"
-        Me.ManutencaoCCToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
-        Me.ManutencaoCCToolStripMenuItem.Text = "Manutenção CC"
+        Me.ManutençãoCCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManutençãoListViewToolStripMenuItem, Me.ManutençãoListViewDTToolStripMenuItem})
+        Me.ManutençãoCCToolStripMenuItem.Name = "ManutençãoCCToolStripMenuItem"
+        Me.ManutençãoCCToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
+        Me.ManutençãoCCToolStripMenuItem.Text = "Manutenção CC"
         '
-        'ManutençãoListaViewToolStripMenuItem
+        'ManutençãoListViewToolStripMenuItem
         '
-        Me.ManutençãoListaViewToolStripMenuItem.Name = "ManutençãoListaViewToolStripMenuItem"
-        Me.ManutençãoListaViewToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ManutençãoListaViewToolStripMenuItem.Text = "Manutenção ListaView"
+        Me.ManutençãoListViewToolStripMenuItem.Name = "ManutençãoListViewToolStripMenuItem"
+        Me.ManutençãoListViewToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ManutençãoListViewToolStripMenuItem.Text = "Manutenção ListView"
         '
-        'ManutencaoListaViewDTToolStripMenuItem
+        'ManutençãoListViewDTToolStripMenuItem
         '
-        Me.ManutencaoListaViewDTToolStripMenuItem.Name = "ManutencaoListaViewDTToolStripMenuItem"
-        Me.ManutencaoListaViewDTToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ManutencaoListaViewDTToolStripMenuItem.Text = "Manutencao ListaViewDT"
+        Me.ManutençãoListViewDTToolStripMenuItem.Name = "ManutençãoListViewDTToolStripMenuItem"
+        Me.ManutençãoListViewDTToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ManutençãoListViewDTToolStripMenuItem.Text = "Manutenção ListView DT"
         '
         'Frm_Principal01
         '
@@ -127,7 +127,7 @@ Partial Class Frm_Principal01
     Friend WithEvents ContasCorrentesAgenciaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContasCorrentesAgenciaDicToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SimulaçãoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManutencaoCCToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManutençãoListaViewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManutencaoListaViewDTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoCCToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoListViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoListViewDTToolStripMenuItem As ToolStripMenuItem
 End Class

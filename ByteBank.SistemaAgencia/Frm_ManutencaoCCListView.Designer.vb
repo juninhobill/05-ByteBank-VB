@@ -2,7 +2,7 @@
 Partial Class Frm_ManutencaoCCListView
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
+    'Descartar substituições de formulário para limpar a lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,25 +14,25 @@ Partial Class Frm_ManutencaoCCListView
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
+    'Exigido pelo Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
+    'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
+    'Pode ser modificado usando o Windows Form Designer.  
+    'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_ManutencaoCCListView))
         Me.Grp_Lista = New System.Windows.Forms.GroupBox()
         Me.Lvw_Contas = New System.Windows.Forms.ListView()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.NovoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Grp_CriterioOrdenacao = New System.Windows.Forms.GroupBox()
         Me.Rb_Saldo = New System.Windows.Forms.RadioButton()
         Me.Rb_Nome = New System.Windows.Forms.RadioButton()
         Me.Rb_Conta = New System.Windows.Forms.RadioButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SalvarToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Grp_Lista.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Grp_CriterioOrdenacao.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class Frm_ManutencaoCCListView
         Me.Grp_Lista.Controls.Add(Me.Lvw_Contas)
         Me.Grp_Lista.Location = New System.Drawing.Point(12, 28)
         Me.Grp_Lista.Name = "Grp_Lista"
-        Me.Grp_Lista.Size = New System.Drawing.Size(507, 327)
+        Me.Grp_Lista.Size = New System.Drawing.Size(370, 332)
         Me.Grp_Lista.TabIndex = 0
         Me.Grp_Lista.TabStop = False
         Me.Grp_Lista.Text = "GroupBox1"
@@ -51,30 +51,29 @@ Partial Class Frm_ManutencaoCCListView
         'Lvw_Contas
         '
         Me.Lvw_Contas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Lvw_Contas.HideSelection = False
         Me.Lvw_Contas.Location = New System.Drawing.Point(3, 16)
         Me.Lvw_Contas.Name = "Lvw_Contas"
-        Me.Lvw_Contas.Size = New System.Drawing.Size(501, 308)
+        Me.Lvw_Contas.Size = New System.Drawing.Size(364, 313)
         Me.Lvw_Contas.TabIndex = 0
         Me.Lvw_Contas.UseCompatibleStateImageBehavior = False
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.ToolStripButton1, Me.SaveToolStripButton})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovoToolStripButton, Me.ToolStripButton1, Me.SalvarToolStripButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(530, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(396, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'NewToolStripButton
+        'NovoToolStripButton
         '
-        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
-        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NewToolStripButton.Name = "NewToolStripButton"
-        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NewToolStripButton.Text = "&New"
+        Me.NovoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NovoToolStripButton.Image = CType(resources.GetObject("NovoToolStripButton.Image"), System.Drawing.Image)
+        Me.NovoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NovoToolStripButton.Name = "NovoToolStripButton"
+        Me.NovoToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NovoToolStripButton.Text = "&Novo"
         '
         'ToolStripButton1
         '
@@ -90,9 +89,9 @@ Partial Class Frm_ManutencaoCCListView
         Me.Grp_CriterioOrdenacao.Controls.Add(Me.Rb_Saldo)
         Me.Grp_CriterioOrdenacao.Controls.Add(Me.Rb_Nome)
         Me.Grp_CriterioOrdenacao.Controls.Add(Me.Rb_Conta)
-        Me.Grp_CriterioOrdenacao.Location = New System.Drawing.Point(15, 361)
+        Me.Grp_CriterioOrdenacao.Location = New System.Drawing.Point(12, 366)
         Me.Grp_CriterioOrdenacao.Name = "Grp_CriterioOrdenacao"
-        Me.Grp_CriterioOrdenacao.Size = New System.Drawing.Size(504, 69)
+        Me.Grp_CriterioOrdenacao.Size = New System.Drawing.Size(370, 42)
         Me.Grp_CriterioOrdenacao.TabIndex = 2
         Me.Grp_CriterioOrdenacao.TabStop = False
         Me.Grp_CriterioOrdenacao.Text = "GroupBox1"
@@ -100,7 +99,7 @@ Partial Class Frm_ManutencaoCCListView
         'Rb_Saldo
         '
         Me.Rb_Saldo.AutoSize = True
-        Me.Rb_Saldo.Location = New System.Drawing.Point(408, 29)
+        Me.Rb_Saldo.Location = New System.Drawing.Point(274, 19)
         Me.Rb_Saldo.Name = "Rb_Saldo"
         Me.Rb_Saldo.Size = New System.Drawing.Size(90, 17)
         Me.Rb_Saldo.TabIndex = 2
@@ -111,7 +110,7 @@ Partial Class Frm_ManutencaoCCListView
         'Rb_Nome
         '
         Me.Rb_Nome.AutoSize = True
-        Me.Rb_Nome.Location = New System.Drawing.Point(204, 29)
+        Me.Rb_Nome.Location = New System.Drawing.Point(135, 20)
         Me.Rb_Nome.Name = "Rb_Nome"
         Me.Rb_Nome.Size = New System.Drawing.Size(90, 17)
         Me.Rb_Nome.TabIndex = 1
@@ -122,7 +121,7 @@ Partial Class Frm_ManutencaoCCListView
         'Rb_Conta
         '
         Me.Rb_Conta.AutoSize = True
-        Me.Rb_Conta.Location = New System.Drawing.Point(7, 29)
+        Me.Rb_Conta.Location = New System.Drawing.Point(7, 20)
         Me.Rb_Conta.Name = "Rb_Conta"
         Me.Rb_Conta.Size = New System.Drawing.Size(90, 17)
         Me.Rb_Conta.TabIndex = 0
@@ -130,20 +129,20 @@ Partial Class Frm_ManutencaoCCListView
         Me.Rb_Conta.Text = "RadioButton1"
         Me.Rb_Conta.UseVisualStyleBackColor = True
         '
-        'SaveToolStripButton
+        'SalvarToolStripButton
         '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
+        Me.SalvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SalvarToolStripButton.Image = CType(resources.GetObject("SalvarToolStripButton.Image"), System.Drawing.Image)
+        Me.SalvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SalvarToolStripButton.Name = "SalvarToolStripButton"
+        Me.SalvarToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SalvarToolStripButton.Text = "&Salvar"
         '
         'Frm_ManutencaoCCListView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(530, 442)
+        Me.ClientSize = New System.Drawing.Size(396, 433)
         Me.Controls.Add(Me.Grp_CriterioOrdenacao)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Grp_Lista)
@@ -166,11 +165,11 @@ Partial Class Frm_ManutencaoCCListView
     Friend WithEvents Grp_Lista As GroupBox
     Friend WithEvents Lvw_Contas As ListView
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents NewToolStripButton As ToolStripButton
+    Friend WithEvents NovoToolStripButton As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents Grp_CriterioOrdenacao As GroupBox
     Friend WithEvents Rb_Saldo As RadioButton
     Friend WithEvents Rb_Nome As RadioButton
     Friend WithEvents Rb_Conta As RadioButton
-    Friend WithEvents SaveToolStripButton As ToolStripButton
+    Friend WithEvents SalvarToolStripButton As ToolStripButton
 End Class

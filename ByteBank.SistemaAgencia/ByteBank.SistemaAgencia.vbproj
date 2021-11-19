@@ -159,7 +159,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -194,6 +193,9 @@
     <EmbeddedResource Include="Frm_EntradaSaida.resx">
       <DependentUpon>Frm_EntradaSaida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoCCDataTable.resx">
+      <DependentUpon>Frm_ManutencaoCCDataTable.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ManutencaoCCListView.resx">
       <DependentUpon>Frm_ManutencaoCCListView.vb</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TesteLista.resx">
       <DependentUpon>Frm_TesteLista.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ManutencaoCCDataTable.resx">
-      <DependentUpon>Frm_ManutencaoCCDataTable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

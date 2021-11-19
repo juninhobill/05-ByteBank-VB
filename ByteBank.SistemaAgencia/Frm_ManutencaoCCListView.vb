@@ -6,10 +6,10 @@ Public Class Frm_ManutencaoCCListView
     Dim ListaContas As New List(Of ContaCorrente)
     Public Sub New()
 
-        ' This call is required by the designer.
+        ' Esta chamada é requerida pelo designer.
         InitializeComponent()
 
-        ' Add any initialization after the InitializeComponent() call.
+        ' Adicione qualquer inicialização após a chamada InitializeComponent().
 
         Me.Text = "Manutenção Conta Corrente"
         Grp_Lista.Text = "Lista de Contas Correntes"
@@ -31,11 +31,11 @@ Public Class Frm_ManutencaoCCListView
         Using Fs As New FileStream(NomeArquivo, FileMode.Open)
             Using Leitura As New StreamReader(Fs)
                 While Not Leitura.EndOfStream
-                    Dim linha As String = Leitura.ReadLine
-                    Dim vetorLinha() As String = linha.Split(";")
-                    Dim CC As New ContaCorrente(Val(vetorLinha(0)), Val(vetorLinha(1)), vetorLinha(2))
-                    CC.Depositar(Val(vetorLinha(3)) - 100)
-                    ListaContas.Add(CC)
+                    Dim Linha As String = Leitura.ReadLine()
+                    Dim vetorLinha As String() = Linha.Split(";")
+                    Dim cc As New ContaCorrente(Val(vetorLinha(0)), Val(vetorLinha(1)), vetorLinha(2))
+                    cc.Depositar(Val(vetorLinha(3)) - 100)
+                    ListaContas.Add(cc)
                 End While
             End Using
         End Using
@@ -43,14 +43,19 @@ Public Class Frm_ManutencaoCCListView
     End Sub
 
     Sub FormatarListView()
+        ' Formatar o ListView
+
         Lvw_Contas.View = View.Details
         Lvw_Contas.LabelEdit = False
         Lvw_Contas.AllowColumnReorder = False
         Lvw_Contas.FullRowSelect = True
         Lvw_Contas.GridLines = True
+
     End Sub
 
     Sub CriarColunas()
+        ' Configurar colunas
+
         Lvw_Contas.Columns.Add("Conta Corrente", 100, HorizontalAlignment.Center)
         Lvw_Contas.Columns.Add("Correntista", 150, HorizontalAlignment.Center)
         Lvw_Contas.Columns.Add("Saldo em R$", 100, HorizontalAlignment.Center)
@@ -58,22 +63,25 @@ Public Class Frm_ManutencaoCCListView
 
     Sub AtualizarListView()
 
+        ' Inclusao dos elementos
+
         Lvw_Contas.Items.Clear()
 
         For I As Integer = 0 To ListaContas.Count - 1
             Dim vContaNumero As String = ListaContas(I).agencia.ToString +
-                " - " + ListaContas(I).numero.ToString
+                "-" + ListaContas(I).numero.ToString
             Dim Linha As New ListViewItem
             Linha.Name = vContaNumero
             Linha.Text = vContaNumero
             Linha.SubItems.Add(ListaContas(I).titular.nome)
             Linha.SubItems.Add(ListaContas(I).saldo.ToString)
             Lvw_Contas.Items.Add(Linha)
+
         Next
 
     End Sub
 
-    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
+    Private Sub NovoToolStripButton_Click(sender As Object, e As EventArgs) Handles NovoToolStripButton.Click
         Dim F As New Frm_ContaCorrente
         F.ShowDialog()
         If F.Retorno Then
@@ -110,24 +118,24 @@ Public Class Frm_ManutencaoCCListView
         Dim ListaAuxiliar As IEnumerable(Of ContaCorrente) = ListaContas _
             .OrderBy(Function(conta As ContaCorrente) conta.agencia) _
             .OrderBy(Function(conta As ContaCorrente) conta.numero)
+
         AtualizaListaContas(ListaAuxiliar)
 
     End Sub
 
     Private Sub Rb_Nome_CheckedChanged(sender As Object, e As EventArgs) Handles Rb_Nome.CheckedChanged
-
         Dim ListaAuxiliar As IEnumerable(Of ContaCorrente) = ListaContas _
-            .OrderBy(Function(conta As ContaCorrente) conta.titular.nome)
+           .OrderBy(Function(conta As ContaCorrente) conta.titular.nome)
+
         AtualizaListaContas(ListaAuxiliar)
 
     End Sub
 
     Private Sub Rb_Saldo_CheckedChanged(sender As Object, e As EventArgs) Handles Rb_Saldo.CheckedChanged
-
         Dim ListaAuxiliar As IEnumerable(Of ContaCorrente) = ListaContas _
-            .OrderBy(Function(conta As ContaCorrente) conta.saldo)
-        AtualizaListaContas(ListaAuxiliar)
+          .OrderBy(Function(conta As ContaCorrente) conta.saldo)
 
+        AtualizaListaContas(ListaAuxiliar)
     End Sub
 
     Sub AtualizaListaContas(ListaAuxiliar As IEnumerable(Of ContaCorrente))
@@ -139,7 +147,7 @@ Public Class Frm_ManutencaoCCListView
         AtualizarListView()
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub SalvarToolStripButton_Click(sender As Object, e As EventArgs) Handles SalvarToolStripButton.Click
 
         Dim NomeArquivo As String = "ListaContasCorrentes.csv"
         Using Fs As New FileStream(NomeArquivo, FileMode.Create)
@@ -148,14 +156,14 @@ Public Class Frm_ManutencaoCCListView
                     Dim Linha As String = ""
                     Linha += ListaContas(I).agencia.ToString + ";"
                     Linha += ListaContas(I).numero.ToString + ";"
-                    Linha += ListaContas(I).titular.nome.ToString + ";"
+                    Linha += ListaContas(I).titular.nome + ";"
                     Linha += ListaContas(I).saldo.ToString
                     Escrita.WriteLine(Linha)
                 Next
             End Using
         End Using
 
-        MsgBox("Dados da nova Conta Corrente salvos com sucesso!!!")
+        MsgBox("Dados de conta correntes salvos com sucesso.")
 
     End Sub
 End Class
