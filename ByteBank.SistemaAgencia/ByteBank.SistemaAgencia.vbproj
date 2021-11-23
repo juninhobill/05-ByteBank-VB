@@ -168,6 +168,12 @@
     <Compile Include="Frm_ManutencaoCCListView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_ManutencaoCC_BD.Designer.vb">
+      <DependentUpon>Frm_ManutencaoCC_BD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ManutencaoCC_BD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_ManutencaoClienteDB.Designer.vb">
       <DependentUpon>Frm_ManutencaoClienteDB.vb</DependentUpon>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ManutencaoCCListView.resx">
       <DependentUpon>Frm_ManutencaoCCListView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoCC_BD.resx">
+      <DependentUpon>Frm_ManutencaoCC_BD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ManutencaoClienteDB.resx">
       <DependentUpon>Frm_ManutencaoClienteDB.vb</DependentUpon>

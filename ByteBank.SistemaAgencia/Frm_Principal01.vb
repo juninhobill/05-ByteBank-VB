@@ -70,4 +70,10 @@
         F.MdiParent = Me
         F.Show()
     End Sub
+
+    Private Sub ManutencaoDeContasCorrentesBDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoDeContasCorrentesBDToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoCC_BD
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class

@@ -37,6 +37,7 @@ Partial Class Frm_Principal01
         Me.CadastroDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastroClienteSQLServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutençãoDeClientesBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,7 +108,7 @@ Partial Class Frm_Principal01
         '
         'CadastroBDToolStripMenuItem
         '
-        Me.CadastroBDToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.CadastroClienteSQLServerToolStripMenuItem, Me.ManutençãoDeClientesBDToolStripMenuItem})
+        Me.CadastroBDToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.CadastroClienteSQLServerToolStripMenuItem, Me.ManutençãoDeClientesBDToolStripMenuItem, Me.ManutencaoDeContasCorrentesBDToolStripMenuItem})
         Me.CadastroBDToolStripMenuItem.Name = "CadastroBDToolStripMenuItem"
         Me.CadastroBDToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.CadastroBDToolStripMenuItem.Text = "Cadastro BD"
@@ -115,20 +116,26 @@ Partial Class Frm_Principal01
         'CadastroDeClientesToolStripMenuItem
         '
         Me.CadastroDeClientesToolStripMenuItem.Name = "CadastroDeClientesToolStripMenuItem"
-        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
         Me.CadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes"
         '
         'CadastroClienteSQLServerToolStripMenuItem
         '
         Me.CadastroClienteSQLServerToolStripMenuItem.Name = "CadastroClienteSQLServerToolStripMenuItem"
-        Me.CadastroClienteSQLServerToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.CadastroClienteSQLServerToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
         Me.CadastroClienteSQLServerToolStripMenuItem.Text = "Cadastro Cliente SQL Server"
         '
         'ManutençãoDeClientesBDToolStripMenuItem
         '
         Me.ManutençãoDeClientesBDToolStripMenuItem.Name = "ManutençãoDeClientesBDToolStripMenuItem"
-        Me.ManutençãoDeClientesBDToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
         Me.ManutençãoDeClientesBDToolStripMenuItem.Text = "Manutenção de Clientes BD"
+        '
+        'ManutencaoDeContasCorrentesBDToolStripMenuItem
+        '
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Name = "ManutencaoDeContasCorrentesBDToolStripMenuItem"
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Text = "Manutencao de Contas Correntes BD"
         '
         'Frm_Principal01
         '
@@ -163,4 +170,5 @@ Partial Class Frm_Principal01
     Friend WithEvents CadastroDeClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CadastroClienteSQLServerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutençãoDeClientesBDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutencaoDeContasCorrentesBDToolStripMenuItem As ToolStripMenuItem
 End Class
