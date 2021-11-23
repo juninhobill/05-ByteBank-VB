@@ -33,12 +33,16 @@ Partial Class Frm_Principal01
         Me.ManutençãoCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutençãoListViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutençãoListViewDTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastroBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastroDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastroClienteSQLServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoDeClientesBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.ManutençãoCCToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.ManutençãoCCToolStripMenuItem, Me.CadastroBDToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -92,14 +96,39 @@ Partial Class Frm_Principal01
         'ManutençãoListViewToolStripMenuItem
         '
         Me.ManutençãoListViewToolStripMenuItem.Name = "ManutençãoListViewToolStripMenuItem"
-        Me.ManutençãoListViewToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ManutençãoListViewToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.ManutençãoListViewToolStripMenuItem.Text = "Manutenção ListView"
         '
         'ManutençãoListViewDTToolStripMenuItem
         '
         Me.ManutençãoListViewDTToolStripMenuItem.Name = "ManutençãoListViewDTToolStripMenuItem"
-        Me.ManutençãoListViewDTToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ManutençãoListViewDTToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.ManutençãoListViewDTToolStripMenuItem.Text = "Manutenção ListView DT"
+        '
+        'CadastroBDToolStripMenuItem
+        '
+        Me.CadastroBDToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.CadastroClienteSQLServerToolStripMenuItem, Me.ManutençãoDeClientesBDToolStripMenuItem})
+        Me.CadastroBDToolStripMenuItem.Name = "CadastroBDToolStripMenuItem"
+        Me.CadastroBDToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
+        Me.CadastroBDToolStripMenuItem.Text = "Cadastro BD"
+        '
+        'CadastroDeClientesToolStripMenuItem
+        '
+        Me.CadastroDeClientesToolStripMenuItem.Name = "CadastroDeClientesToolStripMenuItem"
+        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.CadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes"
+        '
+        'CadastroClienteSQLServerToolStripMenuItem
+        '
+        Me.CadastroClienteSQLServerToolStripMenuItem.Name = "CadastroClienteSQLServerToolStripMenuItem"
+        Me.CadastroClienteSQLServerToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.CadastroClienteSQLServerToolStripMenuItem.Text = "Cadastro Cliente SQL Server"
+        '
+        'ManutençãoDeClientesBDToolStripMenuItem
+        '
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Name = "ManutençãoDeClientesBDToolStripMenuItem"
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Text = "Manutenção de Clientes BD"
         '
         'Frm_Principal01
         '
@@ -130,4 +159,8 @@ Partial Class Frm_Principal01
     Friend WithEvents ManutençãoCCToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutençãoListViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutençãoListViewDTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroBDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroDeClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroClienteSQLServerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoDeClientesBDToolStripMenuItem As ToolStripMenuItem
 End Class

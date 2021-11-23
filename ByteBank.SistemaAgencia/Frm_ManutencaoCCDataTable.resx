@@ -135,10 +135,10 @@
   <data name="ToolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVDhPpZPdDYAgDISZwTd/pnB+ZmAG4wCuoL3KiUiJ
-        Gi65RNveF2nQUUvfz+s4+nWaulgqhB5mMBtLpzQ8DJs0d3GwIDEcdEZmL8gjTGeQLEwTIi8+ayQrxAwn
-        e5uejHq9x698gVgu9/QDYi5Z9QFSD0NNgA9huun8dIK8hFGv9wCRh7aL1HyVoQekXJIog9zDlEJwHCNM
-        Rcjtd3buALHaaZhvXw/AAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVDhPpZPRDYAgDESZwT+iUzg/MzCDcQBX0F7lRKRE
+        DZdcom3vRRp01OL9vI5jWKdpSKVK6GEGs6l0SsPeb9LcxdGCpHDUGZm9II8wXUCKME2IvISika0QM5wd
+        bHo26u0ev/IFYrne0w+IuWTVB0g7DHUBPoTprvPTGfISRr3dA0Qe+i5S91WGHpB6SaICcg9TCsFxjDCV
+        ILff2bkDkVppiF4WNj8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

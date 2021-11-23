@@ -26,12 +26,12 @@ Partial Class Frm_ManutencaoCCDataTable
         Me.Grp_Lista = New System.Windows.Forms.GroupBox()
         Me.Lvw_Contas = New System.Windows.Forms.ListView()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.NovoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Grp_CriterioOrdenacao = New System.Windows.Forms.GroupBox()
         Me.Rb_Saldo = New System.Windows.Forms.RadioButton()
         Me.Rb_Nome = New System.Windows.Forms.RadioButton()
         Me.Rb_Conta = New System.Windows.Forms.RadioButton()
-        Me.NovoToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Grp_Lista.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Grp_CriterioOrdenacao.SuspendLayout()
@@ -50,6 +50,7 @@ Partial Class Frm_ManutencaoCCDataTable
         'Lvw_Contas
         '
         Me.Lvw_Contas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Lvw_Contas.HideSelection = False
         Me.Lvw_Contas.Location = New System.Drawing.Point(3, 16)
         Me.Lvw_Contas.Name = "Lvw_Contas"
         Me.Lvw_Contas.Size = New System.Drawing.Size(364, 313)
@@ -64,6 +65,24 @@ Partial Class Frm_ManutencaoCCDataTable
         Me.ToolStrip1.Size = New System.Drawing.Size(396, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'NovoToolStripButton
+        '
+        Me.NovoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NovoToolStripButton.Image = CType(resources.GetObject("NovoToolStripButton.Image"), System.Drawing.Image)
+        Me.NovoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NovoToolStripButton.Name = "NovoToolStripButton"
+        Me.NovoToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NovoToolStripButton.Text = "&Novo"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Apagar"
         '
         'Grp_CriterioOrdenacao
         '
@@ -109,24 +128,6 @@ Partial Class Frm_ManutencaoCCDataTable
         Me.Rb_Conta.TabStop = True
         Me.Rb_Conta.Text = "RadioButton1"
         Me.Rb_Conta.UseVisualStyleBackColor = True
-        '
-        'NovoToolStripButton
-        '
-        Me.NovoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NovoToolStripButton.Image = CType(resources.GetObject("NovoToolStripButton.Image"), System.Drawing.Image)
-        Me.NovoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NovoToolStripButton.Name = "NovoToolStripButton"
-        Me.NovoToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NovoToolStripButton.Text = "&Novo"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'Frm_ManutencaoCCDataTable
         '

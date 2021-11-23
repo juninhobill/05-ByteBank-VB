@@ -28,11 +28,11 @@ Partial Class Frm_ManutencaoCCListView
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.NovoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.SalvarToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Grp_CriterioOrdenacao = New System.Windows.Forms.GroupBox()
         Me.Rb_Saldo = New System.Windows.Forms.RadioButton()
         Me.Rb_Nome = New System.Windows.Forms.RadioButton()
         Me.Rb_Conta = New System.Windows.Forms.RadioButton()
-        Me.SalvarToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Grp_Lista.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Grp_CriterioOrdenacao.SuspendLayout()
@@ -51,6 +51,7 @@ Partial Class Frm_ManutencaoCCListView
         'Lvw_Contas
         '
         Me.Lvw_Contas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Lvw_Contas.HideSelection = False
         Me.Lvw_Contas.Location = New System.Drawing.Point(3, 16)
         Me.Lvw_Contas.Name = "Lvw_Contas"
         Me.Lvw_Contas.Size = New System.Drawing.Size(364, 313)
@@ -82,7 +83,16 @@ Partial Class Frm_ManutencaoCCListView
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.Text = "Apagar"
+        '
+        'SalvarToolStripButton
+        '
+        Me.SalvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SalvarToolStripButton.Image = CType(resources.GetObject("SalvarToolStripButton.Image"), System.Drawing.Image)
+        Me.SalvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SalvarToolStripButton.Name = "SalvarToolStripButton"
+        Me.SalvarToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SalvarToolStripButton.Text = "&Salvar"
         '
         'Grp_CriterioOrdenacao
         '
@@ -128,15 +138,6 @@ Partial Class Frm_ManutencaoCCListView
         Me.Rb_Conta.TabStop = True
         Me.Rb_Conta.Text = "RadioButton1"
         Me.Rb_Conta.UseVisualStyleBackColor = True
-        '
-        'SalvarToolStripButton
-        '
-        Me.SalvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SalvarToolStripButton.Image = CType(resources.GetObject("SalvarToolStripButton.Image"), System.Drawing.Image)
-        Me.SalvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SalvarToolStripButton.Name = "SalvarToolStripButton"
-        Me.SalvarToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SalvarToolStripButton.Text = "&Salvar"
         '
         'Frm_ManutencaoCCListView
         '

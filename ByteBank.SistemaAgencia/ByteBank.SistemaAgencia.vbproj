@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,6 +91,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bytebankDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bytebankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ByteBankDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByteBankDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Aleatorio.vb" />
     <Compile Include="Classes\Estagiario.vb" />
     <Compile Include="Classes\Lista.vb" />
@@ -83,6 +108,18 @@
     <Compile Include="Classes\ListaDeObjects.vb" />
     <Compile Include="Classes\ListaExtensoesModulo.vb" />
     <Compile Include="Classes\ListaShared.vb" />
+    <Compile Include="Frm_Cliente.Designer.vb">
+      <DependentUpon>Frm_Cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cliente_SQLServer.Designer.vb">
+      <DependentUpon>Frm_Cliente_SQLServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cliente_SQLServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_ContaCorrente.Designer.vb">
       <DependentUpon>Frm_ContaCorrente.vb</DependentUpon>
     </Compile>
@@ -131,6 +168,12 @@
     <Compile Include="Frm_ManutencaoCCListView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_ManutencaoClienteDB.Designer.vb">
+      <DependentUpon>Frm_ManutencaoClienteDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ManutencaoClienteDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Principal01.Designer.vb">
       <DependentUpon>Frm_Principal01.vb</DependentUpon>
     </Compile>
@@ -141,6 +184,12 @@
       <DependentUpon>Frm_Simulacao.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Simulacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TesteDB.Designer.vb">
+      <DependentUpon>Frm_TesteDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TesteDB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_TesteLista.Designer.vb">
@@ -159,6 +208,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -172,6 +222,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Cliente.resx">
+      <DependentUpon>Frm_Cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cliente_SQLServer.resx">
+      <DependentUpon>Frm_Cliente_SQLServer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ContaCorrente.resx">
       <DependentUpon>Frm_ContaCorrente.vb</DependentUpon>
     </EmbeddedResource>
@@ -199,11 +255,17 @@
     <EmbeddedResource Include="Frm_ManutencaoCCListView.resx">
       <DependentUpon>Frm_ManutencaoCCListView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoClienteDB.resx">
+      <DependentUpon>Frm_ManutencaoClienteDB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal01.resx">
       <DependentUpon>Frm_Principal01.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Simulacao.resx">
       <DependentUpon>Frm_Simulacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TesteDB.resx">
+      <DependentUpon>Frm_TesteDB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TesteLista.resx">
       <DependentUpon>Frm_TesteLista.vb</DependentUpon>
@@ -216,6 +278,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bytebankDataSet.xsc">
+      <DependentUpon>bytebankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bytebankDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bytebankDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bytebankDataSet.xss">
+      <DependentUpon>bytebankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ByteBankDBDataSet.xsc">
+      <DependentUpon>ByteBankDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ByteBankDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ByteBankDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ByteBankDBDataSet.xss">
+      <DependentUpon>ByteBankDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -233,6 +317,27 @@
       <Project>{d3c78bb8-1e56-472b-a6cf-b917b0891b7a}</Project>
       <Name>ByteBank.Bibliotecas</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Banco de Dados\ByteBankDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Banco de Dados\ByteBankDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>ByteBankDB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

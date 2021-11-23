@@ -52,4 +52,22 @@
         F.MdiParent = Me
         F.Show()
     End Sub
+
+    Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeClientesToolStripMenuItem.Click
+        Dim F As New Frm_Cliente
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub CadastroClienteSQLServerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroClienteSQLServerToolStripMenuItem.Click
+        Dim F As New Frm_Cliente_SQLServer
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ManutençãoDeClientesBDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoDeClientesBDToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoClienteDB
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class
