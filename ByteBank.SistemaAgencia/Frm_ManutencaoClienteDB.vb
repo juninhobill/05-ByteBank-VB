@@ -1,7 +1,11 @@
 ﻿Imports ByteBank.Bibliotecas.Classes.BancoDeDados
 
 Public Class Frm_ManutencaoClienteDB
-    Public Sub New()
+
+    Dim TipoBanco As String = ""
+    Public Sub New(_TipoBanco As String)
+
+        TipoBanco = _TipoBanco
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -13,6 +17,7 @@ Public Class Frm_ManutencaoClienteDB
         Lbl_CPF.Text = "CPF"
         Lbl_Nome.Text = "Nome"
         Lbl_Profissao.Text = "Profissao"
+        Lbl_Database.Text = "Banco usado: " + TipoBanco
 
         FormatarListView()
         CriarColunas()
@@ -46,7 +51,14 @@ Public Class Frm_ManutencaoClienteDB
         Lvw_Clientes.Items.Clear()
         Try
             Dim Dt As New DataTable
-            Dt = ManutencaoClienteBD.RetornaClientes()
+            Select Case TipoBanco
+                Case "SQLSERVER"
+                    Dt = ManutencaoClienteBD.RetornaClientes()
+                Case "ORACLE"
+                    Dt = ManutencaoClienteBDOracle.RetornaClientes()
+                Case "MYSQL"
+                    Dt = ManutencaoClienteBDMySQL.RetornaClientes()
+            End Select
 
             For I As Integer = 0 To Dt.Rows.Count - 1
                 Dim Linha As New ListViewItem
@@ -87,7 +99,15 @@ Public Class Frm_ManutencaoClienteDB
                     MsgBox("Profissão vazio.")
                 Else
                     Try
-                        Dim vRetorno As String = ManutencaoClienteBD.EditaCliente(Txt_CPF.Text, Txt_Nome.Text, Txt_Profissao.Text)
+                        Dim vRetorno As String = ""
+                        Select Case TipoBanco
+                            Case "SQLSERVER"
+                                vRetorno = ManutencaoClienteBD.EditaCliente(Txt_CPF.Text, Txt_Nome.Text, Txt_Profissao.Text)
+                            Case "ORACLE"
+                                vRetorno = ManutencaoClienteBDOracle.EditaCliente(Txt_CPF.Text, Txt_Nome.Text, Txt_Profissao.Text)
+                            Case "MYSQL"
+                                vRetorno = ManutencaoClienteBDMySQL.EditaCliente(Txt_CPF.Text, Txt_Nome.Text, Txt_Profissao.Text)
+                        End Select
                         MsgBox(vRetorno)
                         AtualizarListView()
                     Catch ex As Exception
@@ -106,7 +126,15 @@ Public Class Frm_ManutencaoClienteDB
             MsgBox("Cpf vazio.")
         Else
             Try
-                Dim vRetorno As String = ManutencaoClienteBD.ExcluiCliente(Txt_CPF.Text)
+                Dim vRetorno As String = ""
+                Select Case TipoBanco
+                    Case "SQLSERVER"
+                        vRetorno = ManutencaoClienteBD.ExcluiCliente(Txt_CPF.Text)
+                    Case "ORACLE"
+                        vRetorno = ManutencaoClienteBDOracle.ExcluiCliente(Txt_CPF.Text)
+                    Case "MYSQL"
+                        vRetorno = ManutencaoClienteBDMySQL.ExcluiCliente(Txt_CPF.Text)
+                End Select
                 MsgBox(vRetorno)
                 AtualizarListView()
             Catch ex As Exception

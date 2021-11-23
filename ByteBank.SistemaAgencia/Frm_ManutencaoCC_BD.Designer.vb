@@ -35,6 +35,7 @@ Partial Class Frm_ManutencaoCC_BD
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Lbl_Database = New System.Windows.Forms.Label()
         Me.Grp_Lista.SuspendLayout()
         Me.Grp_CriterioOrdenacao.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -43,9 +44,9 @@ Partial Class Frm_ManutencaoCC_BD
         'Grp_Lista
         '
         Me.Grp_Lista.Controls.Add(Me.Lvw_Contas)
-        Me.Grp_Lista.Location = New System.Drawing.Point(12, 28)
+        Me.Grp_Lista.Location = New System.Drawing.Point(12, 52)
         Me.Grp_Lista.Name = "Grp_Lista"
-        Me.Grp_Lista.Size = New System.Drawing.Size(475, 370)
+        Me.Grp_Lista.Size = New System.Drawing.Size(475, 346)
         Me.Grp_Lista.TabIndex = 1
         Me.Grp_Lista.TabStop = False
         Me.Grp_Lista.Text = "GroupBox1"
@@ -56,7 +57,7 @@ Partial Class Frm_ManutencaoCC_BD
         Me.Lvw_Contas.HideSelection = False
         Me.Lvw_Contas.Location = New System.Drawing.Point(3, 16)
         Me.Lvw_Contas.Name = "Lvw_Contas"
-        Me.Lvw_Contas.Size = New System.Drawing.Size(469, 351)
+        Me.Lvw_Contas.Size = New System.Drawing.Size(469, 327)
         Me.Lvw_Contas.TabIndex = 0
         Me.Lvw_Contas.UseCompatibleStateImageBehavior = False
         '
@@ -151,11 +152,21 @@ Partial Class Frm_ManutencaoCC_BD
         Me.toolStripSeparator1.Name = "toolStripSeparator1"
         Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
+        'Lbl_Database
+        '
+        Me.Lbl_Database.AutoSize = True
+        Me.Lbl_Database.Location = New System.Drawing.Point(12, 33)
+        Me.Lbl_Database.Name = "Lbl_Database"
+        Me.Lbl_Database.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Database.TabIndex = 5
+        Me.Lbl_Database.Text = "Label1"
+        '
         'Frm_ManutencaoCC_BD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(499, 465)
+        Me.Controls.Add(Me.Lbl_Database)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Grp_CriterioOrdenacao)
         Me.Controls.Add(Me.Grp_Lista)
@@ -186,4 +197,5 @@ Partial Class Frm_ManutencaoCC_BD
     Friend WithEvents SaveToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator As ToolStripSeparator
     Friend WithEvents toolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents Lbl_Database As Label
 End Class

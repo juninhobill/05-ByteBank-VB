@@ -5,7 +5,10 @@ Public Class Frm_ManutencaoCC_BD
 
     Public DS As New DataSet
     Public DtListView As New DataTable
-    Public Sub New()
+    Dim TipoBanco As String = ""
+    Public Sub New(_TipoBanco As String)
+
+        TipoBanco = _TipoBanco
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -18,6 +21,7 @@ Public Class Frm_ManutencaoCC_BD
         Rb_Conta.Text = "Conta"
         Rb_Nome.Text = "Nome"
         Rb_Saldo.Text = "Saldo"
+        Lbl_Database.Text = "Banco usado: " + TipoBanco
 
         InicializacaoContas()
         FormatarListView()
@@ -44,8 +48,18 @@ Public Class Frm_ManutencaoCC_BD
         Dim Contas As New List(Of ContaCorrente)
 
         Try
-            Cliente = ManutencaoClienteBD.RetornaListaClientes()
-            Contas = ManutencaoClienteBD.RetornaListaContasCorrente(Cliente)
+            Select Case TipoBanco
+                Case "SQLSERVER"
+                    Cliente = ManutencaoClienteBD.RetornaListaClientes()
+                    Contas = ManutencaoClienteBD.RetornaListaContasCorrente(Cliente)
+                Case "ORACLE"
+                    Cliente = ManutencaoClienteBDOracle.RetornaListaClientes()
+                    Contas = ManutencaoClienteBDOracle.RetornaListaContasCorrente(Cliente)
+                Case "MYSQL"
+                    Cliente = ManutencaoClienteBDMySQL.RetornaListaClientes()
+                    Contas = ManutencaoClienteBDMySQL.RetornaListaContasCorrente(Cliente)
+            End Select
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -341,7 +355,16 @@ Public Class Frm_ManutencaoCC_BD
         Dim Dt As New DataTable
         Dt = DS.Tables("Contas Correntes")
         Try
-            Dim vRetorno = ManutencaoClienteBD.DescarregaContasCorrentes(Dt)
+            Dim vRetorno = ""
+            Select Case TipoBanco
+                Case "SQLSERVER"
+                    vRetorno = ManutencaoClienteBD.DescarregaContasCorrentes(Dt)
+                Case "ORACLE"
+                    vRetorno = ManutencaoClienteBDOracle.DescarregaContasCorrentes(Dt)
+                Case "MYSQL"
+                    vRetorno = ManutencaoClienteBDMySQL.DescarregaContasCorrentes(Dt)
+            End Select
+
             MsgBox(vRetorno)
         Catch ex As Exception
             MsgBox(ex.Message)

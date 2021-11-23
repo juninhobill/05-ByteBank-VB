@@ -38,6 +38,10 @@ Partial Class Frm_Principal01
         Me.CadastroClienteSQLServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutençãoDeClientesBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManutencaoDeContasCorrentesBDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoDeClientesBDOracleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutencaoDeContasCorrentesBDOracleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutençãoDeClientesBDMySQLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -108,7 +112,7 @@ Partial Class Frm_Principal01
         '
         'CadastroBDToolStripMenuItem
         '
-        Me.CadastroBDToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.CadastroClienteSQLServerToolStripMenuItem, Me.ManutençãoDeClientesBDToolStripMenuItem, Me.ManutencaoDeContasCorrentesBDToolStripMenuItem})
+        Me.CadastroBDToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.CadastroClienteSQLServerToolStripMenuItem, Me.ManutençãoDeClientesBDToolStripMenuItem, Me.ManutencaoDeContasCorrentesBDToolStripMenuItem, Me.ManutençãoDeClientesBDOracleToolStripMenuItem, Me.ManutencaoDeContasCorrentesBDOracleToolStripMenuItem, Me.ManutençãoDeClientesBDMySQLToolStripMenuItem, Me.ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem})
         Me.CadastroBDToolStripMenuItem.Name = "CadastroBDToolStripMenuItem"
         Me.CadastroBDToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.CadastroBDToolStripMenuItem.Text = "Cadastro BD"
@@ -116,26 +120,50 @@ Partial Class Frm_Principal01
         'CadastroDeClientesToolStripMenuItem
         '
         Me.CadastroDeClientesToolStripMenuItem.Name = "CadastroDeClientesToolStripMenuItem"
-        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
+        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
         Me.CadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes"
         '
         'CadastroClienteSQLServerToolStripMenuItem
         '
         Me.CadastroClienteSQLServerToolStripMenuItem.Name = "CadastroClienteSQLServerToolStripMenuItem"
-        Me.CadastroClienteSQLServerToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
+        Me.CadastroClienteSQLServerToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
         Me.CadastroClienteSQLServerToolStripMenuItem.Text = "Cadastro Cliente SQL Server"
         '
         'ManutençãoDeClientesBDToolStripMenuItem
         '
         Me.ManutençãoDeClientesBDToolStripMenuItem.Name = "ManutençãoDeClientesBDToolStripMenuItem"
-        Me.ManutençãoDeClientesBDToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
-        Me.ManutençãoDeClientesBDToolStripMenuItem.Text = "Manutenção de Clientes BD"
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutençãoDeClientesBDToolStripMenuItem.Text = "Manutenção de Clientes BD - SQLServer"
         '
         'ManutencaoDeContasCorrentesBDToolStripMenuItem
         '
         Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Name = "ManutencaoDeContasCorrentesBDToolStripMenuItem"
-        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Size = New System.Drawing.Size(269, 22)
-        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Text = "Manutencao de Contas Correntes BD"
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutencaoDeContasCorrentesBDToolStripMenuItem.Text = "Manutencao de Contas Correntes BD - SQLServer"
+        '
+        'ManutençãoDeClientesBDOracleToolStripMenuItem
+        '
+        Me.ManutençãoDeClientesBDOracleToolStripMenuItem.Name = "ManutençãoDeClientesBDOracleToolStripMenuItem"
+        Me.ManutençãoDeClientesBDOracleToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutençãoDeClientesBDOracleToolStripMenuItem.Text = "Manutenção de Clientes BD - Oracle"
+        '
+        'ManutencaoDeContasCorrentesBDOracleToolStripMenuItem
+        '
+        Me.ManutencaoDeContasCorrentesBDOracleToolStripMenuItem.Name = "ManutencaoDeContasCorrentesBDOracleToolStripMenuItem"
+        Me.ManutencaoDeContasCorrentesBDOracleToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutencaoDeContasCorrentesBDOracleToolStripMenuItem.Text = "Manutencao de Contas Correntes BD - Oracle"
+        '
+        'ManutençãoDeClientesBDMySQLToolStripMenuItem
+        '
+        Me.ManutençãoDeClientesBDMySQLToolStripMenuItem.Name = "ManutençãoDeClientesBDMySQLToolStripMenuItem"
+        Me.ManutençãoDeClientesBDMySQLToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutençãoDeClientesBDMySQLToolStripMenuItem.Text = "Manutenção de Clientes BD - MySQL"
+        '
+        'ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem
+        '
+        Me.ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem.Name = "ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem"
+        Me.ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem.Size = New System.Drawing.Size(333, 22)
+        Me.ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem.Text = "Manutencao de Contas Correntes BD - MySQL"
         '
         'Frm_Principal01
         '
@@ -171,4 +199,8 @@ Partial Class Frm_Principal01
     Friend WithEvents CadastroClienteSQLServerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutençãoDeClientesBDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManutencaoDeContasCorrentesBDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoDeClientesBDOracleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutencaoDeContasCorrentesBDOracleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutençãoDeClientesBDMySQLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem As ToolStripMenuItem
 End Class

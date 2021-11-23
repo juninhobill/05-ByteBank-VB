@@ -66,13 +66,37 @@
     End Sub
 
     Private Sub ManutençãoDeClientesBDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoDeClientesBDToolStripMenuItem.Click
-        Dim F As New Frm_ManutencaoClienteDB
+        Dim F As New Frm_ManutencaoClienteDB("SQLSERVER")
         F.MdiParent = Me
         F.Show()
     End Sub
 
     Private Sub ManutencaoDeContasCorrentesBDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoDeContasCorrentesBDToolStripMenuItem.Click
-        Dim F As New Frm_ManutencaoCC_BD
+        Dim F As New Frm_ManutencaoCC_BD("SQLSERVER")
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ManutençãoDeClientesBDOracleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoDeClientesBDOracleToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoClienteDB("ORACLE")
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ManutencaoDeContasCorrentesBDOracleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoDeContasCorrentesBDOracleToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoCC_BD("ORACLE")
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ManutençãoDeClientesBDMySQLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutençãoDeClientesBDMySQLToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoClienteDB("MYSQL")
+        F.MdiParent = Me
+        F.Show()
+    End Sub
+
+    Private Sub ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManutencaoDeContasCorrentesBDMySQLToolStripMenuItem.Click
+        Dim F As New Frm_ManutencaoCC_BD("MYSQL")
         F.MdiParent = Me
         F.Show()
     End Sub

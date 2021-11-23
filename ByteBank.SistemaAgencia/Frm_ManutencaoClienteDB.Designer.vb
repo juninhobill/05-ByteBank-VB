@@ -35,6 +35,7 @@ Partial Class Frm_ManutencaoClienteDB
         Me.Lbl_CPF = New System.Windows.Forms.Label()
         Me.Lbl_Nome = New System.Windows.Forms.Label()
         Me.Lbl_Profissao = New System.Windows.Forms.Label()
+        Me.Lbl_Database = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.Grp_Lista.SuspendLayout()
         Me.SuspendLayout()
@@ -81,9 +82,9 @@ Partial Class Frm_ManutencaoClienteDB
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Grp_Lista.Controls.Add(Me.Lvw_Clientes)
-        Me.Grp_Lista.Location = New System.Drawing.Point(12, 128)
+        Me.Grp_Lista.Location = New System.Drawing.Point(12, 144)
         Me.Grp_Lista.Name = "Grp_Lista"
-        Me.Grp_Lista.Size = New System.Drawing.Size(482, 215)
+        Me.Grp_Lista.Size = New System.Drawing.Size(482, 199)
         Me.Grp_Lista.TabIndex = 3
         Me.Grp_Lista.TabStop = False
         Me.Grp_Lista.Text = "GroupBox1"
@@ -94,27 +95,27 @@ Partial Class Frm_ManutencaoClienteDB
         Me.Lvw_Clientes.HideSelection = False
         Me.Lvw_Clientes.Location = New System.Drawing.Point(3, 16)
         Me.Lvw_Clientes.Name = "Lvw_Clientes"
-        Me.Lvw_Clientes.Size = New System.Drawing.Size(476, 196)
+        Me.Lvw_Clientes.Size = New System.Drawing.Size(476, 180)
         Me.Lvw_Clientes.TabIndex = 0
         Me.Lvw_Clientes.UseCompatibleStateImageBehavior = False
         '
         'Txt_CPF
         '
-        Me.Txt_CPF.Location = New System.Drawing.Point(93, 38)
+        Me.Txt_CPF.Location = New System.Drawing.Point(80, 64)
         Me.Txt_CPF.Name = "Txt_CPF"
         Me.Txt_CPF.Size = New System.Drawing.Size(206, 20)
         Me.Txt_CPF.TabIndex = 4
         '
         'Txt_Nome
         '
-        Me.Txt_Nome.Location = New System.Drawing.Point(93, 64)
+        Me.Txt_Nome.Location = New System.Drawing.Point(80, 90)
         Me.Txt_Nome.Name = "Txt_Nome"
         Me.Txt_Nome.Size = New System.Drawing.Size(206, 20)
         Me.Txt_Nome.TabIndex = 5
         '
         'Txt_Profissao
         '
-        Me.Txt_Profissao.Location = New System.Drawing.Point(93, 89)
+        Me.Txt_Profissao.Location = New System.Drawing.Point(80, 115)
         Me.Txt_Profissao.Name = "Txt_Profissao"
         Me.Txt_Profissao.Size = New System.Drawing.Size(206, 20)
         Me.Txt_Profissao.TabIndex = 6
@@ -122,7 +123,7 @@ Partial Class Frm_ManutencaoClienteDB
         'Lbl_CPF
         '
         Me.Lbl_CPF.AutoSize = True
-        Me.Lbl_CPF.Location = New System.Drawing.Point(26, 38)
+        Me.Lbl_CPF.Location = New System.Drawing.Point(13, 64)
         Me.Lbl_CPF.Name = "Lbl_CPF"
         Me.Lbl_CPF.Size = New System.Drawing.Size(39, 13)
         Me.Lbl_CPF.TabIndex = 7
@@ -131,7 +132,7 @@ Partial Class Frm_ManutencaoClienteDB
         'Lbl_Nome
         '
         Me.Lbl_Nome.AutoSize = True
-        Me.Lbl_Nome.Location = New System.Drawing.Point(26, 64)
+        Me.Lbl_Nome.Location = New System.Drawing.Point(13, 90)
         Me.Lbl_Nome.Name = "Lbl_Nome"
         Me.Lbl_Nome.Size = New System.Drawing.Size(39, 13)
         Me.Lbl_Nome.TabIndex = 8
@@ -140,17 +141,27 @@ Partial Class Frm_ManutencaoClienteDB
         'Lbl_Profissao
         '
         Me.Lbl_Profissao.AutoSize = True
-        Me.Lbl_Profissao.Location = New System.Drawing.Point(26, 92)
+        Me.Lbl_Profissao.Location = New System.Drawing.Point(13, 118)
         Me.Lbl_Profissao.Name = "Lbl_Profissao"
         Me.Lbl_Profissao.Size = New System.Drawing.Size(39, 13)
         Me.Lbl_Profissao.TabIndex = 9
         Me.Lbl_Profissao.Text = "Label3"
+        '
+        'Lbl_Database
+        '
+        Me.Lbl_Database.AutoSize = True
+        Me.Lbl_Database.Location = New System.Drawing.Point(13, 35)
+        Me.Lbl_Database.Name = "Lbl_Database"
+        Me.Lbl_Database.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Database.TabIndex = 10
+        Me.Lbl_Database.Text = "Label1"
         '
         'Frm_ManutencaoClienteDB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(506, 355)
+        Me.Controls.Add(Me.Lbl_Database)
         Me.Controls.Add(Me.Lbl_Profissao)
         Me.Controls.Add(Me.Lbl_Nome)
         Me.Controls.Add(Me.Lbl_CPF)
@@ -182,4 +193,5 @@ Partial Class Frm_ManutencaoClienteDB
     Friend WithEvents Lbl_CPF As Label
     Friend WithEvents Lbl_Nome As Label
     Friend WithEvents Lbl_Profissao As Label
+    Friend WithEvents Lbl_Database As Label
 End Class
