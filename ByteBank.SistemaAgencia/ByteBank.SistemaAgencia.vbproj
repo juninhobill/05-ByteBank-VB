@@ -205,6 +205,12 @@
     <Compile Include="Frm_TestaDBOracle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_TestDBOleDB.Designer.vb">
+      <DependentUpon>Frm_TestDBOleDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TestDBOleDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_TesteDB.Designer.vb">
       <DependentUpon>Frm_TesteDB.vb</DependentUpon>
     </Compile>
@@ -221,6 +227,12 @@
       <DependentUpon>Frm_ManutencaoCCDataTable.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_ManutencaoCCDataTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TesteProviders.Designer.vb">
+      <DependentUpon>Frm_TesteProviders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TesteProviders.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -292,11 +304,17 @@
     <EmbeddedResource Include="Frm_TestaDBOracle.resx">
       <DependentUpon>Frm_TestaDBOracle.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TestDBOleDB.resx">
+      <DependentUpon>Frm_TestDBOleDB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_TesteDB.resx">
       <DependentUpon>Frm_TesteDB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TesteLista.resx">
       <DependentUpon>Frm_TesteLista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TesteProviders.resx">
+      <DependentUpon>Frm_TesteProviders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

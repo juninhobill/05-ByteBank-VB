@@ -77,6 +77,7 @@
     <Compile Include="Classes\Banco de Dados\ManutencaoClienteBDMySQL.vb" />
     <Compile Include="Classes\Banco de Dados\ManutencaoClienteBDOracle.vb" />
     <Compile Include="Classes\Banco de Dados\MySQLConn.vb" />
+    <Compile Include="Classes\Banco de Dados\OleDBConn.vb" />
     <Compile Include="Classes\Banco de Dados\OracleConn.vb" />
     <Compile Include="Classes\Banco de Dados\SQLServerConn.vb" />
     <Compile Include="Classes\Bibliotecas\AutenticacaoHelper.vb" />
