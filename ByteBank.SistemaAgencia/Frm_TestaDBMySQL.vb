@@ -8,7 +8,7 @@ Public Class Frm_TestaDBMySQL
         DtGrid_Resultado.DataSource = Nothing
         Try
             Dim Dt As New DataTable
-            Dim DB As New MySQLConn("localhost", "root", "MPsj@#$270678", "bytebank")
+            Dim DB As New MySQLConn("localhost", "root", "admin", "bytebank")
             Dim Retorno As String = DB.SQLQuery("SELECT CPF,NOME,PROFISSAO FROM CLIENTE", Dt)
             DtGrid_Resultado.DataSource = Dt
             DB.Close()

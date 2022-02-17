@@ -8,7 +8,7 @@ Public Class Frm_TestaDBOracle
         DtGrid_Resultado.DataSource = Nothing
         Try
             Dim Dt As New DataTable
-            Dim DB As New OracleConn("XE", "system", "MPsj@#$270678")
+            Dim DB As New OracleConn("XE", "system", "admin")
             Dim Retorno As String = DB.SQLQuery("SELECT CPF,NOME,PROFISSAO FROM CLIENTE", Dt)
             DtGrid_Resultado.DataSource = Dt
             DB.Close()
